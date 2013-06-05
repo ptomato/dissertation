@@ -1,0 +1,87 @@
+% Local customizations to tufte-book
+
+% VARIOUS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Increase number of slots for floats
+\morefloats
+
+% Number chapters and sections
+\setcounter{secnumdepth}{2}
+
+% Fix spacing with XeTeX
+\renewcommand{\allcaps}[1]{\MakeTextUppercase{#1}}
+\renewcommand{\smallcaps}[1]{\textsc{\MakeTextLowercase{#1}}}
+
+% Don't complain about \\ in title or section names
+\pdfstringdefDisableCommands{\let\\\@gobble}
+
+% TODO: Make [tb] the default placement for all floats
+
+% Suppress warning about fancyhdr's headheight
+% \setlength{\headheight}{23.1pt}
+
+% Tweak the spacing between floats and text
+\setlength\textfloatsep{0pt plus 10pt}
+\setlength\floatsep{10pt plus 5pt minus 10pt}
+
+% Alternative to \newthought for beginnings of chapters
+\newcommand\sectionstart[1]{\noindent\textsc{#1}}
+
+% Make section heading spacing slightly more tolerant
+\titlespacing*{\section}{0pt}{3.5ex plus 1.25ex minus .5ex}{2.3ex plus .75ex minus .4ex}
+
+% CUSTOM TITLE PAGE WITH SUBTITLE %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\renewcommand{\maketitlepage}[0]{%
+	\cleardoublepage%
+	{%
+		\sffamily%
+		\begin{fullwidth}%
+			\fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
+			\vspace{11.5pc}%
+			\fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
+			\ifdefined\@subtitle%
+				\vspace{5mm}\par\fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\@subtitle}}%
+			\fi%
+			\vfill%
+		\end{fullwidth}%
+	}%
+	\thispagestyle{empty}%
+	\clearpage%
+}
+
+% CUSTOM INTER-PART PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\part}[block]%
+	{\sffamily}%
+	{\fontsize{18}{20}\selectfont\textcolor{darkgray}{\allcaps{Part \thepart}}}%
+	{1em}%
+	{\vspace{11.5pc}\nohyphenation\fontsize{30}{34}\selectfont\\\color{darkgray}\allcaps}%
+	[\vfill]
+
+% Fix chapter heads to have ragged right
+\titleformat{\chapter}%
+	[display]% shape
+	{\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}\raggedright}{}}% format applied to label+text
+	{\itshape\huge\thechapter}% label
+	{0pt}% horizontal separation between label and title body
+	{\huge\rmfamily\itshape}% before the title body
+	[\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
+
+% Custom TOC entries
+\titlecontents{part}%
+    [0em]% distance from left margin
+    {\scshape}% above
+    {}% before w/label
+    {Part }% before w/o label
+    {}% filler + page (leaders and page num)
+    [\vspace{0.9\baselineskip}] % after
+
+\titlecontents{chapter}%
+    [0em]% distance from left margin
+    {\rmfamily\itshape}% above
+    {\hspace{2em}\contentslabel{2em}}% before w/label
+    {}% before w/o label
+    {\rmfamily\upshape\qquad\thecontentspage}% filler + page
+    [\vspace{0.9\baselineskip}]% after

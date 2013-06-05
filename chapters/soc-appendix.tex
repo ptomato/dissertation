@@ -1,0 +1,107 @@
+\section{Plasmon-assisted transmission}
+
+\marginnote{This section is an appendix that did not appear in the published paper.}
+\sectionstart{We also conducted} experiments on a ring slit similar to the one in Fig.~\ref{soc:fig:sample}, with an added groove which serves as a surface plasmon outcoupler.
+On the same substrate, we milled a circular slit, $5\micron$ in diameter and $200\unit{nm}$ wide, and then a circular groove concentric with the slit, $20\micron$ in diameter and also $200\unit{nm}$ wide.
+The groove is essentially a slit which is not deep enough to reach all the way through the gold layer.
+Due to the focused-ion beam being depth-calibrated for silicon substrates and not gold, the exact depth of the groove is uncertain, but we estimate $(100\pm25)\unit{nm}$.
+Fig.~\ref{soc:fig:groove-sample} shows a sketch of this structure.
+
+\begin{marginfigure}
+  \centering\import{illustrations/soc/}{illustrations/soc/grooveslit.pdf_tex}
+  \caption{A sketch of the groove-slit nanostructure milled into the sample.}
+  \label{soc:fig:groove-sample}
+\end{marginfigure}
+Since the slit's quarter-wave plate-like behavior relies strongly on the loss due to surface plasmon generation, we can expect surface plasmons to travel radially outwards from the slit.
+When these surface plasmons reach the groove, they are partly scattered into free space as propagating light.
+We expect this light to be radially polarized around the symmetry axis of the slit.
+To measure this scattering, we conducted the experiment in exactly the same way as described in section~\ref{soc:sec:near-field}, except that we overexposed the \gls{CCD} camera in order to detect the much weaker scattering from the groove.
+
+Figures~\ref{soc:fig:groove-near-field} and \ref{soc:fig:groove-stokes-analysis} show the results of this experiment.
+The transmitted intensity (Fig.~\ref{soc:fig:groove-near-field}a) is more complicated to interpret in this case.
+For one thing, it exhibits blooming\footnote{Blooming is the vertical streaking visible when overexposure causes too many electrons to accumulate in the potential well of a \gls{CCD} pixel, making them overflow to neighboring pixels.}, which blots out a small section of the groove.
+%
+\begin{figure}[tb]
+  \centering\includegraphics{graphs/soc/groove-near-field.pdf}
+  \caption{(a) Measured intensity emitted by the ring groove (delineated in red).
+  The light transmitted through the smaller ring slit is obscured by blooming due to overexposure.
+  (b) Local polarization ellipses of the light emitted by the ring groove.
+  Blue ellipses indicate right-handed elliptical polarization, red ones indicate left-handed elliptical polarization, and black lines indicate polarization states with ellipticity less than 10\%.}
+  \label{soc:fig:groove-near-field}
+\end{figure}
+
+Also, the slit and groove are subwavelength, making it impossible to image them perfectly.
+In practice, this means that the crisp boundaries of the slit and groove are softened and widened, and unwanted garbage shows up on the camera outside of the slit and groove.
+The usual way of explaining this phenomenon is to define a \gls{PSF} for the
+imaging system.
+The \gls{PSF} can also be viewed as the impulse response of the
+imaging system, the impulse being an infinitesimal point source. The source field can then be viewed as a superposition of infinitesimal point sources, and the field at the image plane of the imaging system is a superposition of point spread functions.
+In other words, the output field is the convolution of the input field with the point spread function.
+The intensity point spread function of an ideal imaging system is an Airy disc.\footnote{When dealing with the field, one should actually use a complex 3-vector-valued point spread function \parencite{Marian2007}, but here we will assume that there is no coupling between \glstext{TE} and \glstext{TM} components due to the imaging system.}
+In Fig.~\ref{near-field-measurements}a, the point spread function is barely visible, because the outer rings of the Airy function are very faint, but since the light emerging from the groove is much fainter than the slit, they are of comparable intensity.
+Therefore, the groove is marked in Fig.~\ref{soc:fig:groove-near-field}a in between two concentric circles.
+
+Taking into account that the polarization measurements in Fig.~\ref{soc:fig:groove-near-field} are less accurate than those in Fig.~\ref{near-field-measurements}, we still note that the groove emits light that is more or less radially polarized.
+We compare the measurements to the expectation in Fig.~\ref{soc:fig:groove-stokes-analysis}.
+%
+\begin{figure}[tb]
+  \centering\includegraphics{graphs/soc/groove-stokes-analysis.pdf}
+  \caption{Measured normalized Stokes parameters $s_1=S_{1}/S_{0}$, $s_2=S_{2}/S_{0}$, $s_3=S_{3}/S_{0}$ of the light emitted by the ring groove as a function of azimuthal angle.
+  This shows the same information as Fig.~\ref{soc:fig:groove-near-field}, but here it is easier to compare it to the expected results (solid lines).
+  Compare Fig.~\ref{soc:fig:stokes-analysis}.}
+  \label{soc:fig:groove-stokes-analysis}
+\end{figure}%
+
+Here, also, we calculate the expectation value of the spin and orbital angular momenta per photon averaged over the whole beam in the output state of the plasmon-assisted transmitted light, shown in Fig.~\ref{soc:fig:groove-stokes-analysis}.
+This output state has $S = 0, L = \hbar$, again showing that the total angular momentum per photon, $J = S + L$, is conserved.
+
+\section{Plasmonic cross-talk between points on the ring}
+
+\marginnote{This section is an appendix that did not appear in the published paper.}
+\sectionstart{Considering the plasmonic contribution} in the slit-only system may also help to explain why the polarization in Fig.~\ref{near-field-measurements}b is not purely linear.
+The light incident on the slit is converted linearly to a surface plasmon, barring an unknown attenuation and retardation factor which we will ignore for now.
+These surface plasmons travel from one side of the circle to the other.
+
+Only the \gls{TM} component excites a plasmon, with $\uz$-polarization. The plasmon propagates across the gold surface, undergoing diffraction, and hits the slit again, scattering once again into \gls{TM}, or $\ur$-polarized, light.
+Since the plasmons only couple to radial polarization, the plasmonic contribution to the transmission has a different polarization than the direct contribution.
+The smaller plasmonic contribution should therefore be visible as a deviation in the polarization of the light emerging from the slit.
+
+To calculate the diffraction the surface plasmons undergo during the transit from one side of the ring to the other, we look at the Fres\-nel-Kirch\-hoff diffraction integral:
+\footnote{As in \textcite{Griffiths}, $\vrsep$ denotes the separation vector between a source point $\vect{r}'$ and a field point $\vect{r}$: $\vrsep \equiv \vect{r} - \vect{r}' = (x-x')\ux + (z-z')\uz$.}
+\[ E(x,z) = \frac{1}{i\sqrt{\lambda_\SP}} \int E(x',0) \frac{e^{ik\rsep}}{\sqrt\rsep} \cos\eta \,dx' \]
+Since the diffraction takes place in two dimensions, the Huygens waves scattered by each point on the wavefront are not spherical ($e^{ikr}/r$) but instead damped cylindrical waves\cite{Teperik2009} ($e^{ikr}/\sqrt{r}$).
+Here, $z$ is the diffraction distance along the propagation axis.
+The separation vector $\vrsep$ is the distance between a source point $x'$ in the $z=0$ plane and the point $x$ that we are interested in in the image plane.
+The angle $\eta=\arccos z/\rsep$ is the angle between the propagation vector and the separation vector, so $\cos\eta$ can also be written as $\uvect{k}\cdot\ursep$.
+
+Based on this, we can construct the following diffraction integral in polar coordinates for our ring-slit geometry, shown in Fig.~\ref{soc:fig:innercircle}:
+\begin{equation}
+  E_\SP(R_0, \theta) =
+  \frac{1}{i\sqrt{\lambda_\SP}} \int_{-\pi/2}^{\pi/2}
+  E_{0,\SP}(R_0, \theta+\zeta)
+  \frac{e^{ik_\SP\rsep}}{\sqrt{\rsep}} \uvect{k} \cdot \ursep R_0 \,d\zeta
+\end{equation}
+The physical meaning of this integral is that for each point on the ring, the surface plasmon-assisted field is a sum of the contributions from points elsewhere on the ring.
+The point $(R_0,\theta)$ that we are interested in only receives contributions from the facing inner side of the ring: angles $\theta+\pi/2$ to $\theta+3\pi/2$.
+%
+\begin{figure}[tb]
+\forcerectofloat\centering
+\import{illustrations/soc/}{illustrations/soc/plasmondiffraction.pdf_tex}
+\caption{Diffraction geometry of surface plasmons traveling inside the circular slit from one side to the other. The plasmon-assisted transmission at each point on the ring $(R_0,\theta)$ is the sum of contributions from the plasmonic field launched on the semicircle opposite on the ring. When converted back to light, this plasmonic contribution should be purely radially polarized, which should be visible as an alteration of the polarization direction of the directly transmitted contribution.}
+\label{soc:fig:innercircle}
+\end{figure}
+
+After some calculation, we can write:
+\begin{equation}
+E_\SP(R_0,\theta) = i E_{0,\SP}(R_0, 0) \tilde{f}(k_\SP R_0)
+\end{equation}
+where
+\[ \tilde{f}(q) = \frac{1}{4} \sqrt{\frac{q}{\pi}} \int_{-\pi/2}^{\pi/2}
+   e^{i(\zeta + 2q\cos(\zeta/2))} \frac{1+\cos\zeta}{(\cos(\zeta/2))^{3/2}} \,d\zeta \]
+
+Adding the direct and plasmonic contributions, we see that the light emerging from the slit is not necessarily linearly polarized anymore:
+\begin{equation}
+  \cA{out}(R_0, \theta) = \iinvsq e^{i\theta} \left(
+  \left(1 + \tilde{A}\tilde{f}(k_\SP R_0)\right)\ur + \ut \right)
+\end{equation}
+where $\tilde{A}$ is the unknown attenuation and retardation due to conversion between light and surface plasmons and vice versa. The plasmonic contribution adds a small degree of ellipticity to the polarization everywhere, depending on the phase of $\tilde{A}$.

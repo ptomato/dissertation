@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="360"
+   height="453.5433"
+   id="svg4275"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="double-slit-cartoon.svg">
+  <defs
+     id="defs4277">
+    <linearGradient
+       id="linearGradient4388">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop4390" />
+      <stop
+         id="stop4412"
+         offset="0.1"
+         style="stop-color:#ff0000;stop-opacity:0;" />
+      <stop
+         id="stop4410"
+         offset="0.2"
+         style="stop-color:#ff0000;stop-opacity:1;" />
+      <stop
+         id="stop4408"
+         offset="0.30000001"
+         style="stop-color:#ff0000;stop-opacity:0;" />
+      <stop
+         id="stop4402"
+         offset="0.40000001"
+         style="stop-color:#ff0000;stop-opacity:1;" />
+      <stop
+         id="stop4400"
+         offset="0.5"
+         style="stop-color:#ff0000;stop-opacity:0;" />
+      <stop
+         id="stop4398"
+         offset="0.60000002"
+         style="stop-color:#ff0000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:0;"
+         offset="0.69999999"
+         id="stop4404" />
+      <stop
+         id="stop4406"
+         offset="0.80205005"
+         style="stop-color:#ff0000;stop-opacity:1;" />
+      <stop
+         id="stop4396"
+         offset="0.89726025"
+         style="stop-color:#ff0000;stop-opacity:0;" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="1"
+         id="stop4392" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4388"
+       id="linearGradient4397"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.39441519,0,0,0.39441519,-1032.072,402.83287)"
+       x1="2979.1499"
+       y1="1182.8087"
+       x2="3236.8801"
+       y2="1327.6677" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4388"
+       id="linearGradient4402"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.39441519,0,0,0.39441519,-1058.336,458.13872)"
+       x1="2979.1499"
+       y1="1182.8087"
+       x2="3236.8801"
+       y2="1327.6677" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="125.15542"
+     inkscape:cy="195.92168"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="mm"
+     borderlayer="true"
+     inkscape:window-width="1618"
+     inkscape:window-height="1028"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4280">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-598.81385)">
+    <image
+       sodipodi:absref="C:\Users\chimento\Dropbox\Work files\Writing\201303 PhD thesis\illustrations\tomography\double-slit-cartoon.png"
+       xlink:href="double-slit-cartoon.png"
+       y="599.88513"
+       x="-19.79784"
+       id="image4138"
+       height="461.18628"
+       width="403.22299" />
+    <path
+       style="fill:url(#linearGradient4397);fill-opacity:1;stroke:none"
+       d="m 172.84574,864.60286 0.2222,-11.12185 105.56165,7.10141 -12.35444,25.5069 z"
+       id="path4386"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cscccc"
+       inkscape:connector-curvature="0"
+       id="path4400"
+       d="m 130.9244,891.11936 c 0,0 7.18803,-0.36785 10.71771,-1.01524 3.12916,-0.57391 9.20248,-2.53047 9.20248,-2.53047 l 101.52103,28.31462 -12.35444,25.5069 z"
+       style="fill:url(#linearGradient4402);fill-opacity:1;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Corbel;-inkscape-font-specification:Corbel"
+       x="182.83762"
+       y="56.553352"
+       id="text2999"
+       sodipodi:linespacing="125%"
+       transform="translate(0,598.81384)"><tspan
+         sodipodi:role="line"
+         id="tspan3001"
+         x="182.83762"
+         y="56.553352">incoming</tspan><tspan
+         sodipodi:role="line"
+         x="182.83762"
+         y="69.053352"
+         id="tspan3003">vortex beam</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Corbel;-inkscape-font-specification:Corbel"
+       x="291.54294"
+       y="892.55273"
+       id="text3005"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.97611445,0.21725694,-0.21725694,0.97611445,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3007"
+         x="291.54294"
+         y="892.55273">emitter slit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Corbel;-inkscape-font-specification:Corbel"
+       x="395.98465"
+       y="905.95752"
+       id="text3009"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.98332668,0.18184783,-0.18184783,0.98332668,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="395.98465"
+         y="905.95752">receiver slit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Corbel;-inkscape-font-specification:Corbel"
+       x="131.4211"
+       y="981.14136"
+       id="text3013"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3015"
+         x="131.4211"
+         y="981.14136">direct transmission</tspan><tspan
+         sodipodi:role="line"
+         x="131.4211"
+         y="993.64136"
+         id="tspan3017">(not used)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Corbel;-inkscape-font-specification:Corbel"
+       x="236.88077"
+       y="1040.2354"
+       id="text3019"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3021"
+         x="236.88077"
+         y="1040.2354">plasmon-assisted transmission</tspan></text>
+  </g>
+</svg>

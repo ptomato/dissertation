@@ -1,0 +1,65 @@
+\usepackage[MnSymbol]{mathspec}
+\normalizevarforms
+
+% Minion Pro for serif
+\setallmainfonts(Digits,Latin,Greek)[
+	Path=fonts/,
+	UprightFont=*-Regular,
+	BoldFont=*-Bold,
+	ItalicFont=*-It,
+	BoldItalicFont=*-BoldIt,
+	SmallCapsFeatures={LetterSpace=7},
+	Numbers={OldStyle,Proportional},
+	Ligatures=TeX
+]{MinionPro}
+\setmathsfont(Digits)[Path=fonts/,Numbers=Lining]{MinionPro-Regular}
+
+% Optima for sans-serif; see http://www.tug.dk/FontCatalogue/optima/
+\setsansfont[
+	Path=fonts/,
+	UprightFont=*-Reg,
+	BoldFont=*-Bol,
+	ItalicFont=*-Ita,
+	BoldItalicFont=*-BolIta
+]{URWClassico}
+
+% Vera Mono for mono
+\setmonofont[
+	Path=fonts/,
+	BoldFont=VeraMoBd,
+	ItalicFont=VeraMoIt,
+	BoldItalicFont=VeraMoBI,
+	Scale=MatchLowercase
+]{VeraMono}
+
+% Workaround for ridiculous bug in mathspec
+% http://tex.stackexchange.com/questions/20430/how-do-i-change-the-mathtt-font-with-mathspec
+\mathcode`\0=\numexpr\mathcode`0+"7000\relax
+\mathcode`\1=\numexpr\mathcode`1+"7000\relax
+\mathcode`\2=\numexpr\mathcode`2+"7000\relax
+\mathcode`\3=\numexpr\mathcode`3+"7000\relax
+\mathcode`\4=\numexpr\mathcode`4+"7000\relax
+\mathcode`\5=\numexpr\mathcode`5+"7000\relax
+\mathcode`\6=\numexpr\mathcode`6+"7000\relax
+\mathcode`\7=\numexpr\mathcode`7+"7000\relax
+\mathcode`\8=\numexpr\mathcode`8+"7000\relax
+\mathcode`\9=\numexpr\mathcode`9+"7000\relax
+
+% Missing symbols in Minion Pro
+\newfontface\missingsymbol[Path=fonts/,Scale=MatchLowercase]{Cambria}
+\renewcommand{\textopenbullet}{{\missingsymbol ○}}  % defined in textcomp
+\renewcommand{\partial}{\text{∂}}
+
+% Script font
+\newfontface\script[
+	Path=fonts/,
+	Extension=.TTF,
+	Scale=MatchLowercase
+]{SCRIPTBL}  % Script MT Bold
+% Calligraphic font
+\newfontfamily\calligraphicfont[
+	Path=fonts/,
+	Extension=.TTF,
+	Scale=1.1,
+	ItalicFont=*
+]{MTCORSVA}  % Monotype Corsiva

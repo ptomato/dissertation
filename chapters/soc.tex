@@ -1,0 +1,121 @@
+\chapter{Spin-to-orbital angular momentum conversion in a subwavelength slit}
+\label{soc:chapter}
+
+\begin{abstract}
+We demonstrate partial conversion of circularly polarized light into orbital angular momentum-carrying vortex light with opposite-handed circular polarization. This conversion is accomplished in a novel manner using the birefringent properties of a circular subwavelength slit in a thin metal film. Our technique can be applied over a very wide range of frequencies and even allows the creation of anisotropic vortices when using a slit without circular symmetry.
+\end{abstract}
+
+\section{Introduction}
+
+\marginnote{This chapter was previously published as: \textcite{Chimento2012}.}
+\sectionstart{The curious phenomenon} of optical vortices arising from axial symmetry in birefringent materials has been studied in uniaxial crystals of variable length \cite{Ciattoni2003, Brasselet2009b}, birefringent plates with a spatially varying optical axis and half-wave retardation (``$q$-plates'') \cite{Marrucci2006, Karimi2009, Brasselet2011}, and in annular concentric apertures which resonantly excite surface plasmons \cite{Lombard2010}. This interaction between spin and orbital angular momentum of light by way of a Berry-Pan\-cha\-rat\-nam phase has also been studied in space-variant gratings \cite{Bomzon2001}, plasmonic nanostructures in the context of selection rules \cite{Gorodetski2009}, and also completely outside the domain of optics, in electron beams \cite{Karimi2012}.
+
+We present here a novel method of accomplishing this conversion using a subwavelength slit in a metal film acting as a quarter-wave plate, described in chapter~\ref{qwp:chapter}. We show how this method relaxes the axial symmetry requirement, allowing greater versatility in the form of the vortex created.
+
+In optics, a spin angular momentum of $\pm \hbar $ is associated with a circularly polarized photon. Orbital angular momentum is often associated with an optical vortex beam, where the phase increases azimuthally around the optical axis. These beams have a topological charge $Q$, equal to the number of full cycles the phase makes in one trip around the optical axis. The expectation value of the orbital angular momentum per photon is $Q\hbar $ \cite{Allen1992}. The difference between the two forms of angular momentum is beautifully apparent in the interaction of a beam with small particles: interaction with the spin angular momentum in the absence of absorption requires particles that are birefringent; they will start to rotate about their  own axis, whereas interaction with a beam carrying orbital angular momentum causes particles, whether birefringent or not, to rotate about the beam's optical axis \cite{ONeil2002}.
+
+\newthought{Chapter~\ref{qwp:chapter} describes} how a subwavelength slit in a metal film can act as an optical retarder. A slit which is subwavelength in one direction, and extended in the other, has two eigenpolarizations: parallel and perpendicular to the slit. By careful design of the slit's width and depth, it is possible to construct a slit that behaves like a quarter-wave retarder for incident light of a certain wavelength, with its fast axis (i.e.\ axis with the lowest index of refraction) parallel to the orientation of the slit.
+One can achieve similar results using subwavelength structures with different resonances for orthogonal polarization components \cite{Roberts2012, Genevet2012}.
+Illuminating the straight slit with circularly polarized light results in linearly polarized light emerging from the other side. The associated change in angular momentum means that a torque is exerted on the sample \cite{Beth1936}.
+
+\begin{marginfigure}
+  \includegraphics[width=\marginparwidth]{graphs/soc/expected-near-field}
+  \caption{Diagram showing the expected local polarization state of light transmitted through the ring slit.
+  The transmitted intensity is constant everywhere on the slit.}
+  \label{soc:fig:expected-near-field}
+\end{marginfigure}%
+When the slit is circular, the fast and slow axes' orientations vary along the slit so that it acts as a space-variant quarter-wave plate. In this circularly symmetric configuration, photonic spin angular momentum cannot transfer to the sample, and must be converted to photonic orbital angular momentum in order to conserve the total angular momentum. This intuitive picture is confirmed by taking the expectation value of the spin and orbital angular momenta per photon \cite{Berry2005}, respectively denoted $S$ and $L$, averaged over the whole beam in the input and output states.  Whereas the input state has $S = \hbar, L = 0$, the output state (shown in Fig.~\ref{soc:fig:expected-near-field}) has $S = 0, L = \hbar $. The total angular momentum per photon, $J = S + L$, is indeed conserved.
+
+\section{Near-field experiment}
+\label{soc:sec:near-field}
+
+\sectionstart{To confirm this} by experiment, we took a glass substrate of $0.5\unit{mm}$ thickness. On it we deposited a titanium adhesion layer of $10\unit{nm}$ thickness, and on that a gold film of $200\unit{nm}$ thickness. We milled a circular slit, $20\micron$ in diameter and $(180\pm 10)\unit{nm}$ wide, through the gold film using a focused Ga$^+$ ion beam. Fig.~\ref{soc:fig:sample} shows a sketch of the structure.
+%
+\begin{marginfigure}[14pt]
+  \forcerectofloat\import{illustrations/soc/}{illustrations/soc/ringslit.pdf_tex}
+  \caption{A sketch of the nanostructure milled into the sample.}
+  \label{soc:fig:sample}
+\end{marginfigure}
+
+We conducted the experiment using a diode laser with a wavelength of $830\unit{nm}$. We used a quarter-wave plate to give the beam from this laser a circular polarization state, $\usigma_{+}$. (We define the circular polarization basis unit vectors $\usigma_{\pm } = (\uvect{x} \pm  i\uvect{y})/\sqrt {2}$.) We then focused the beam weakly onto the glass side of the sample. The beam diameter at the waist was $90\micron$, much larger than the nanostructure diameter of $20\micron$, so that, effectively, the structure was illuminated with a plane wave. We used a microscope objective (\gls{NA} 0.4) to image the slit onto a \gls{CCD} camera (Apogee Alta \smallcaps{U1}).
+
+We measured the polarization of the transmitted light as a function of the transverse position within the image. To determine this polarization, we used a fixed linear polarizer and a computer-controlled rotating quarter-wave plate, as shown in Fig.~\ref{setup}, from which we extracted the Stokes parameters according to the method described in \textcite{Schaefer2007} as a function of position. Fig.~\ref{near-field-measurements} shows the results of this experiment. We observe small variations in the transmitted intensity along the ring, which are probably caused by small variations in the slit width. The polarization state of the light emerging from the structure, however, shows excellent agreement with the result of our calculations, as shown in Fig.~\ref{soc:fig:stokes-analysis}.
+%
+\begin{figure}[tb]
+  \centering\import{illustrations/soc/}{illustrations/soc/setup-nearfield.pdf_tex}
+  \caption{Sketch of the experimental setup used to image the ring slit. \smallcaps{QWP}: quarter wave plate; \smallcaps{LP}: linear polarizer. The quarter-wave plate and linear polarizer on the right-hand side of the figure measure the local polarization state of the light.}
+  \label{setup}
+\end{figure}
+%
+%%%%% TWEAK %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[b]
+  \centering
+  \includegraphics{graphs/soc/measured-near-field}
+  \caption{(a) Measured intensity transmitted through the ring slit. (b) Local polarization ellipses of the light transmitted through the ring slit. Blue ellipses indicate right-handed elliptical polarization, red ones indicate left-handed elliptical polarization, and black lines indicate polarization states with ellipticity less than 10\%.}
+  \label{near-field-measurements}
+\end{figure}
+%
+\begin{figure}[tb]
+  \forceversofloat\centering
+  \includegraphics{graphs/soc/stokes-analysis}
+  \caption{Measured normalized Stokes parameters $s_1=S_{1}/S_{0}$, $s_2=S_{2}/S_{0}$, $s_3=S_{3}/S_{0}$ of the light transmitted through the ring slit as a function of azimuthal angle. This shows the same information as Fig.~\ref{near-field-measurements}, but here it is easier to compare it to the expected results (solid lines), with which we observe quite good agreement.
+  An angle of $0^\circ$ corresponds to 3 o'clock in Fig.~\ref{near-field-measurements}, and increases counterclockwise.}
+  \label{soc:fig:stokes-analysis}
+\end{figure}
+
+\section{Analytical model}
+
+\sectionstart{The polarization} measured in Fig.~\ref{near-field-measurements} suggests that the light emerging from the nanostructure is a superposition of radial and azimuthal polarization. Beams with such types of polarization, usually called vector beams, were first described as waveguide modes \cite{Marcatili1964} with a dark spot in the center due to a polarization singularity. At first glance, one might expect our metallic nanostructure to produce a vector beam, and thus have a dark spot in the center of the far field. However, calculating the far field by numerical Fourier transform shows that there is no dark spot in the center; in fact, the local polarization state on the optical axis in the far field is purely $\usigma_{+}$, the same as the input polarization state.
+
+In order to explore this further, we derived an analytical expression for the far field by Fourier-transforming the field shown in Fig.~\ref{soc:fig:expected-near-field} and linearizing over the slit width $\Delta R$,
+%
+\begin{equation}\label{far-field}
+\vect{E}_{0}^{\FF} \approx  \frac{1+i}{\sqrt {2}}\pi R_{0}\Delta R \left(J_{0}(R_{0}k_{\perp }) \usigma_{+} - ie^{2i\theta } J_{2}(R_{0}k_{\perp }) \usigma_{-}\right),
+\end{equation}
+%
+where $R_{0}$ is the radius of the ring, $k_{\perp }$ the transverse component of the wave vector, and $J_{n}$ denotes the Bessel function of the first kind of order $n$. This expression is valid for small $\Delta R$ in the paraxial approximation. These fields are visualized in Figs.~\ref{far-field-measurements}(a) and (d). Note that the characteristic length scale in the far field is given by the radius $R_{0}$ of the circular structure --- that is, the diffraction pattern does not arise from an aperture cutoff, but from the interference between opposite points on the circular slit.
+
+This expression indicates that half of the transmitted beam energy has been converted from the $\usigma_{+}$ to the $\usigma_{-}$ state, while acquiring a topological charge of +2. (The integral of any $J_n(x)$ to infinite $x$ is equal to 1 if $n\geq 0$.) This acquisition of topological charge by the opposite-handed component of the emerging beam can be seen as the result of spin-to-orbital angular momentum conversion, but it is equally instructive to consider it a Ber\-ry-Pan\-cha\-rat\-nam phase, the result of traveling from the north pole ($\usigma_{+}$) of the Poin\-ca\-r\'{e} sphere to the south pole ($\usigma_{-}$) through all possible points on the equator, twice.
+
+We confirm this by calculating the expectation values of the spin and orbital angular momenta per photon for both polarization components separately.
+For the $\usigma_+$ component we have $S = \hbar, L = 0$, which is the same as the input state.
+For the $\usigma_-$ component, we have $S = -\hbar, L = 2\hbar$.
+
+\section{Far-field experiment}
+
+\begin{figure}[tb]
+  \centering\import{illustrations/soc/}{illustrations/soc/setup.pdf_tex}
+  \caption{Sketch of the experimental setup used to measure the polarization and phase of the far field of the slit. \smallcaps{QWP}: quarter wave plate; \smallcaps{FTL}: Fourier-transforming ($2f$) lens; \smallcaps{LP}: linear polarizer. The objective's focus is now not on the camera but in the focus of the \smallcaps{FTL}. In this case, the quarter-wave plate and linear polarizer are simply used to view the $\usigma_{+}$ and $\usigma_{-}$ components separately. This configuration also includes a Mach-Zehnder interferometer which measures the phase of each polarization component.
+  When not measuring the phase, we simply block the reference beam.}
+  \label{soc:fig:setup-farfield}
+\end{figure}
+%
+\sectionstart{We performed} further experiments to explore this, using a $2f$ system to examine the far field; see Fig.~\ref{soc:fig:setup-farfield}. We used a quarter-wave plate and a linear polarizer to measure the intensity distribution of the $\usigma_{+}$ and $\usigma_{-}$ components of the far field separately. We also used a misaligned Mach-Zehn\-der interferometer to visualize the phase of the light transmitted through the slit. The interference pattern consists of parallel interference fringes, which fork according to the topological charge carried by the beam \cite{Basistiy1995}. Figure~\ref{far-field-measurements} shows the results of our measurements compared to the calculation of \eqref{far-field}. The interferograms in Figs.~\ref{far-field-measurements}(c) and (f)%
+\footnote{In (f), the interference fringe minima are marked in red, using the technique described in \textcite{Cai2003}.}
+show that the $\usigma_{-}$ component does indeed have a topological charge of +2, whereas the $\usigma_{+}$ component carries no topological charge.
+%
+\begin{figure}[tb]
+  \forceversofloat\centering
+  \includegraphics{graphs/soc/far-field-measurements}
+  \caption{Calculated and measured far-field diffraction pattern of the circular slit, split into $\usigma_{+}$ (top row) and $\usigma_{-}$ (bottom row) components. (a, d) Calculated intensity and phase in the far field; luminance indicates intensity, and hue (cycling according to the color bars from $0$ through $2\pi $) indicates phase. The $\usigma_{-}$ component has $|Q|=2$. (b, e): Measured intensity of both components, showing good agreement with the calculations. (c, f): Interferograms using reference beams with appropriate polarization, demonstrating the phase of both components. In (c), the fringes are parallel, indicating a flat wavefront with $Q=0$. In (f), on the other hand, one fringe splits into three, indicating a helical wavefront with $|Q|=2$, as in the calculations.}
+  \label{far-field-measurements}
+\end{figure}
+
+\section{Discussion}
+
+\sectionstart{We also consider what happens} when the amplitudes of the transmitted polarization components are unequal, or when the retardation is not exactly a quarter wave. We find that the polarization conversion efficiency $\eta $ is \emph{independent} of the slit's dichroism but depends on the relative phase retardation $\Delta \phi $ between the polarization components as follows:
+%
+\begin{equation}\label{conversion-efficiency}
+\eta  = I_{-}/I_{\mathrm{total}} = \sin^2 (\Delta \phi/2) ,
+\end{equation}
+%
+where $I_{-}$ is the intensity of the $\usigma_{-}$ component. If the slit were to behave like a half-wave retarder, then $\eta $ would become unity. However, designing a half-wave-like slit would once again require careful research to find a suitable width, depth, and material.
+
+This last result suggests that optical spin-orbit conversion is a universal property of a circular nanoslit as long as the local polarization eigenmodes have different propagation constants and are not damped too differently. In order to obtain 100\% conversion efficiency one obviously has to adjust the properties of the slit to the wavelength of the incident light in a way similar to the design of a liquid-crystal based $q$-plate \cite{Marrucci2006} for a certain wavelength. An attractive benefit of this approach to optical spin-orbit conversion is that it is universal, i.e.\ it can be used at wavelengths from the deep UV to the far infrared.
+
+\newthought{One may wonder} what happens when the metallic nanoslit is no longer cylindrically symmetric but encircles a singly connected domain. Since the circular symmetry is broken, transfer of angular momentum to the sample is no longer forbidden. For a quarter-wave-like slit with a circularly polarized Gaussian beam incident on it, half of the emerging light will have the opposite circular polarization and carry a charge 2 vortex with a broad orbital angular momentum spectrum. Contrary to the case of a circular slit, this vortex will be anisotropic.
+% We will explore these systems in chapter~\ref{curve:chapter}.
+
+\section{Summary}
+
+\sectionstart{We have demonstrated} spin-to-orbital angular momentum conversion of an electromagnetic field upon transmission through a circular metallic nanoslit. When illuminated with circularly polarized light, part of the field transmitted through the slit is converted to the opposite handedness and its topological charge is increased or decreased by 2, corresponding to a conversion of spin angular momentum to orbital angular momentum. The conversion efficiency is a function of the relative phase delay that the slit imposes on orthogonal polarization components. This means that full spin-orbit conversion could be achieved simply by passing the light through a slit in a thin metal film, if the slit were to behave like a half-wave retarder. Using a slit without circular symmetry, on the other hand, opens up a new world of possibilities for creating anisotropic optical vortices.

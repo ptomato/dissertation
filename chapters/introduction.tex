@@ -1,0 +1,277 @@
+\chapter*{Preface (Introduction for non-scientists)}
+\addcontentsline{toc}{chapter}{Introduction for non-scientists}
+\markboth{Introduction for non-scientists}{Introduction for non-scientists}
+\label{ch:summary}
+
+\sectionstart{A \emph{surface plasmon} is a light wave} that is trapped on a flat two-dimensional surface, henceforth called Flatland, as in a famous novel \cite{Abbott}.
+Many devices and effects that are familiar from normal, three-dim\-en\-sion\-al optics also exist in Flatland, usually created by applying some sort of material or structure to the surface.
+For example, there are mirrors (Figure~\ref{introduction:fig:flatland-mirror}) and lenses (Figure~\ref{introduction:fig:flatland-lens}).
+%
+\begin{marginfigure}
+  \forcerectofloat
+  \includegraphics[width=\marginparwidth]{illustrations/introduction/flatland-mirror}
+  \caption{A Flatland mirror, seen from above; it is tilted at 45\textdegree.
+The surface plasmon enters from the right side of the figure and is partially reflected downwards.
+(Reprinted from \textcite{Gonzalez2006}, with kind permission of the author.
+Copyright 2006, the American Physical Society.)}
+  \label{introduction:fig:flatland-mirror}
+\end{marginfigure}
+%
+\begin{marginfigure}
+  \forcerectofloat
+  \includegraphics[width=\marginparwidth]{illustrations/introduction/flatland-lens}
+  \caption{A Flatland lens, seen from above.
+The surface plasmon enters from the left side of the figure and is focused to a small spot about halfway through the figure.
+(Reprinted from \textcite{Devaux2010}, with kind permission of the Optical Society of America.)}
+  \label{introduction:fig:flatland-lens}
+\end{marginfigure}
+
+Surface plasmons are special because they can only exist on the boundary surface between a metal that conducts electricity very well, like silver or gold, and a non-metal substance, such as glass, plastic, or air.
+(As always in science, there are exceptions to this rule: semiconductors can also work instead of metals \cite{Rivas2006}, and just recently a layer of graphene was proposed \cite{Gorbach2013}.)
+The metal has to be a good conductor, so that some of the electrons belonging to its atoms, called \emph{free electrons}, can move more or less unhindered through the metal, from atom to atom.
+Surface plasmons cannot exist without free electrons.
+
+In an ocean wave, the water level rises and dips, but nothing like that happens in Flatland.
+In a surface plasmon, the wave is connected to back-and-forth movements of the free electrons in the metal.
+Moving electrons create a wave on the outside of the metal, and the wave moves other electrons inside the metal, which is how surface plasmons move.
+
+Surface plasmons being trapped on the metal's surface, or \emph{confined}, is actually one of the desirable properties of surface plasmons, and partly explains why they are such a popular research subject.
+Transforming light into surface plasmons allows light to squeeze into tiny spaces, smaller than it would otherwise be able to fit into.
+The more you try to confine regular light, the more it tends to spread out, and if you try to cram light into a channel that is too small to contain it (less than half the light's wavelength), then it simply won't fit.%
+\footnote{Although that is a simplification; more about that in chapter~\ref{qwp:chapter}.}
+Surface plasmons, however, can be stuffed into tiny strip-shaped metal channels \cite{Maier2005} or grooves \cite{GarciaVidal2006}.
+Researchers can use them to develop ultra-small components for circuits that carry light instead of electricity: this is the field of \emph{nanophotonics}.%
+\footnote{Nano is a word meaning, roughly, smaller than one micron.
+It refers to the realm of objects the size of a cell membrane, a virus, or one one-thousandth of a human hair.}
+Even though surface plasmons were discovered over fifty years ago, nanotechnology has only caught up in the last ten to fifteen years and made nanophotonics possible.
+
+Another important property of surface plasmons is that confining the light into a small space squeezes all the energy it carries into a small space too --- this effect is known as \emph{field enhancement}.
+Researchers can then do processes that require a lot of energy without needing a lot of light, because all the light's energy is concentrated in one tiny place.
+This is also important for antennas in nanophotonics \cite{Novotny2011a}.
+An antenna is nothing more than a device that converts free radiation (cell tower signals) into localized energy (the electronics in your mobile phone) and vice versa.
+We can engineer tiny metal antennas in such a way that they have a single spot where the field enhancement is very large.
+If we position a molecule at that spot, the molecule can broadcast its energy very efficiently through the antenna.
+So a good plasmonic antenna is an efficient bridge between molecule-sized phenomena and human-scale signals in the laboratory.
+
+One problem with engineering photonic devices is that light is damped when it interacts with metals.
+The light's energy is simply converted into heat.
+Obviously, that is a nuisance, but as is usual in science, someone has figured out a way to turn it into an advantage.
+Researchers are working on an experimental cancer treatment that works with tiny particles called ``nanoshells'' coated with a thin layer of metal \cite{Loo2005}.
+These nanoshells can be attached to antibodies that seek out cancerous tissue and congregate in the tumor cells.
+Infrared light normally passes harmlessly through body tissue; however, the nanoshells are engineered to act as receiver antennas for the light, absorbing it and concentrating all the energy in a small space.
+The resulting release of heat kills the cancer cells.
+
+For further reading, I recommend a 2007 \emph{Scientific American} article about surface plasmons and their applications \cite{Atwater2007}. For a more technical review of the latest developments, there is an open-access article in \emph{Journal of Physics D}\cite{Hayashi2012}, only a few months old at the time of writing.
+
+\section*{Polarization and holes in metal sheets}
+
+\sectionstart{The current wave} of surface plasmon research was unleashed when Thomas Ebbesen at \smallcaps{NEC} Corporation asked a technician to make a grid of tiny holes in a metal sheet.
+When Ebbesen picked up the sheet he was surprised that he could partially see through it even though the holes were supposedly tiny enough that hardly any light should have been able to get through.
+Moreover, the transmitted light was colored, and the color changed when he turned the sheet and viewed it at an angle.
+He first thought the technician had made a mistake and drilled the holes too large, but when it became clear that there was nothing wrong with the holes, he and his co-workers hit upon surface plasmons as an explanation.
+This resulted in a landmark paper \cite{Ebbesen1998} and the discovery of an effect called \emph{extraordinary optical transmission}.
+
+Simply speaking, light falling on a small enough hole in a thin metal sheet launches surface plasmons into Flatland from the edge of the hole.
+These surface plasmons travel across the metal sheet to the next hole, where they turn into light again and pass through the hole.
+This extra light augments the small amount of light that was already traveling through the hole; combined, enough light travels through the metal sheet for it to be translucent.
+
+Chapter~\ref{qwp:chapter} describes research where the opposite result occurs; we studied rectangular-shaped slits in a metal sheet, but only one slit at a time.
+Studying the slits in isolation means that they still launch surface plasmons from their edges, but since the surface plasmons have no other slits to go to, they just travel through Flatland to nowhere and eventually die out.
+This actually causes \emph{less} light to make it through the slit than otherwise would.
+
+We use this effect to create a tiny version of a device called a \emph{quarter-wave plate}.
+It takes light with \emph{linear polarization} and converts it into \emph{circular polarization}.
+Polarization is best thought of as two people, Alice and Bob, holding opposite ends of a long rope (Figure \ref{introduction:fig:jump-rope}).
+If Alice wishes to send a wave to Bob over the rope, she shakes her end back and forth, and a wave travels down the rope to Bob.
+The rope oscillates back and forth in one plane, and we call this \emph{linear polarization}.
+However, Alice can also spin her end of the rope in a circle, in which case a circular wave travels down the rope to Bob; we call this \emph{circular polarization}.
+There are even two variations, depending on whether Alice spins clockwise or counterclockwise, called \emph{left-handed} and \emph{right-handed}.
+Light can do the exact same thing.
+
+\begin{figure}[tb]
+  \forceversofloat\centering
+  \import{illustrations/introduction/}{illustrations/introduction/jump-rope.pdf_tex}
+  \caption{(a) Alice is sending a linearly polarized wave to Bob.
+(b) Alice is sending a left-handed circularly polarized wave to Bob.}
+  \label{introduction:fig:jump-rope}
+\end{figure}
+
+Since a quarter-wave plate converts linear polarization to circular, it is as if Alice sends a linearly polarized wave to Bob, but by the time it reaches Bob it has become circularly polarized.
+This polarization change doesn't happen in a rope, but it does happen in light.
+Quarter-wave plates are present in \smallcaps{3D} projection systems: the image meant for your left eye is projected with left-handed circular polarization, and the one for your right eye is right-handed.
+Filters in your \smallcaps{3D} glasses make sure that each eye only sees the correct image.
+
+Just as in Ebbesen's extraordinary optical transmission, this miniaturized quarter-wave plate also stems from an accidental discovery: in 2005 my co-worker Nikolay Kuzmin discovered by chance that circularly polarized light was coming out of the back sides of slits in a metal sheet \cite[pp.~73--87]{KuzminPhDThesis}.
+
+We continued this line of research in chapter~\ref{soc:chapter}, using the effects explored in chapter~\ref{qwp:chapter} to build a device that converts light with \emph{spin angular momentum} into light with \emph{orbital angular momentum}.
+Consider the Earth: our planet has spin angular momentum because it revolves around its own axis, causing day and night.
+The Earth also has orbital angular momentum because it orbits around the Sun, which causes the seasons.
+Particles of light also have both of these kinds of angular momentum.
+In fact, a light particle spinning around like a top is just another way of looking at circular polarization.
+Light is both a particle and a wave; spin angular momentum is to a light particle as circular polarization is to a light wave.
+
+\section*{Phase vortices}
+
+\sectionstart{Similarly, orbital angular momentum} is to a light particle as \emph{phase vortex} is to a light wave.
+``Phase vortex'' sounds as if it came straight out of \emph{Star Trek}, but it can be easily illustrated with a nice piece of oceanographical research from \smallcaps{NASA} \cite{Ray2006} (Figure \ref{introduction:fig:tidal-patterns}.)
+
+\begin{figure*}[tb]
+  \forcerectofloat\centering
+  \import{illustrations/introduction/}{illustrations/introduction/tidal-patterns.pdf_tex}
+  \caption{Tides in the world's oceans.
+Along each white line, it is high tide at exactly the same time, and neighboring white lines' high tides are separated by one hour.
+The colored spaces represent the tide strength (blue is weaker and red is stronger), and the amplitude is indicated in centimeters.
+(Public domain image.
+Credit to \smallcaps{NASA} Goddard Space Flight Center; \smallcaps{NASA} Jet Propulsion Laboratory; Scientific Visualization Studio; Television Production \smallcaps{NASA-TV/GSFC}.
+Special thanks to Dr.\ Richard Ray, Space Geodesy branch, \smallcaps{NASA/GSFC})}
+  \label{introduction:fig:tidal-patterns}
+\end{figure*}
+
+The ocean tides exhibit phase vortices.
+For example, we can see one in the middle of the Pacific Ocean, at about 15\mbox{\textdegree} south and 150\mbox{\textdegree} west.
+It is not a whirlpool; in fact, if you were to travel there, you would notice nothing special about that spot.
+The white lines indicate places where it is high tide at the same time; each line is an hour earlier or later than its neighbor.
+We could say that the instant of high tide ``rotates'' around the phase vortex.
+So when the lines all meet in the center of the phase vortex, then when is it high tide? Always? Never? The answer is that the phase vortices are always in the blue regions where the tide is weakest: there is no tide there!
+
+Light can do the same thing: we can create a laser beam where the ``high tide'' of the light wave rotates around the center of the laser beam.
+Since there is no tide in the center, the laser beam is dark there.
+We can also have two, three, or more high tides rotating around one laser beam, and they can go clockwise or counterclockwise: the number of high tides is called \emph{topological charge}.
+These laser beams with dark holes in the middle, also called \emph{donut beams}, can be used to encode information densely.%
+%%%%%%%%% TWEAK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\citeoffset{49pt}{Padgett2004,MolinaTerriza2007}
+
+So, converting spin angular momentum to orbital angular momentum, as we describe in chapter~\ref{soc:chapter}, means that we create a donut beam out of a circularly polarized laser beam with no donut.
+Returning to the example of the Earth, it is as if we could make it spin slower but orbit faster, thereby lengthening the day and shortening the year.
+Hitting the Earth with a giant comet would do that, but that requires the comet to contribute its angular momentum.
+With our device, we can create donut beams non-destructively, without adding or losing angular momentum.
+
+One problem with donut beams is that they are hard to identify.
+The donut part is easy to see, but light waves are so fast (trillions of cycles per second) that it's completely impossible to measure the number of high tides directly, or the direction in which they are rotating.
+However, we need to know this information in order to use the beams.
+The usual way of determination involves using a second laser beam to probe the first one.
+However, with the research in chapter~\ref{ch:tomography} we have created a device where the second laser beam is not necessary.
+We used another metal sheet with two slits: one to launch surface plasmons into Flatland and one to catch them and take them out of Flatland.
+The slit takes a ``slice'' of the phase vortex, similar to the way that a longitude line in Fig.~\ref{introduction:fig:tidal-patterns} represents a slice of the ocean.
+By examining the surface plasmons caught at the second slit, we can recover all the information we need about the phase vortex: topological charge, and whether it is rotating clockwise or counterclockwise.
+
+\section*{Aluminum and solitons}
+
+\sectionstart{The second part} of this dissertation examines surface plasmons traveling on an aluminum surface.
+Most surface plasmon research uses gold or silver because these materials absorb less light.
+Aluminum absorbs light in a certain frequency range, which makes it less desirable for some uses.
+However, we are interested in aluminum specifically because of this feature!
+
+The familiar shiny gray color of a polished metal surface arises when the metal reflects all the colors of visible light approximately equally.
+Figure \ref{introduction:fig:aluminum-dip} shows what percentage of light of each color aluminum reflects (as well as light that is invisible to the human eye and therefore has no color: ultraviolet to the left and infrared to the right.) We see that this is true for aluminum as well, but something else happens in the infrared, to the right of the visible part of the spectrum: aluminum reflects less light and absorbs more.
+
+\begin{figure}[tb]
+  \forcerectofloat\centering
+  \includegraphics{graphs/introduction/aluminum-dip.pdf}
+  \caption{Percentage of light reflected by aluminum, versus wavelength of the light (color).
+To the left is ultraviolet light (invisible to human eyes), then visible light (indicated by a rainbow of colors), and to the right of that is infrared light (again invisible.)
+About 93\% of visible light is reflected, but there is a downward dip in the near infrared, which is what we are interested in here.
+The dots and the solid line indicate measurements from two different sources (\origcite{Smith1985,Rakic1998}.)
+The inset shows the interesting region in detail.}
+  \label{introduction:fig:aluminum-dip}
+\end{figure}
+
+In order to see why this is interesting we need to think about a \emph{soliton}: a short wave that remains unchanged as it travels along.
+Ocean waves, for example, break and disperse, while short light pulses get longer and spread out more as they travel.
+Solitons, on the other hand, do not.
+John Scott Russell discovered them by chance in 1834 when he observed one in Scotland's Union Canal.
+Figure~\ref{introduction:fig:solitary-wave} shows a modern-day reconstruction of the discovery.
+Solitons remained an oddball curiosity for over a century until they found an application in fiber-optic communications: the ability to send a pulse of light through a fiber without any distortion proved invaluable.
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics[width=\textwidth]{illustrations/introduction/solitary-wave}
+  \caption{Modern-day reenactment of Scott Russell's discovery of solitons in the Union Canal.
+(Figure reprinted from \textcite{Soliton1995}, with license.) The soliton is visible as the ``mountain'' of water behind the boat.}
+  \label{introduction:fig:solitary-wave}
+\end{figure}
+
+Since pulses disperse in any material, the existence of a soliton depends on two opposite effects that counterbalance each other.
+One of these effects, where blue light travels faster through the material than red light, is called \emph{anomalous dispersion}.%
+\footnote{This is a terribly inappropriate name, because anomalous dispersion is not an anomaly at all: it is present in most materials.
+`Anomalous' implies that it's rare or not understood, but in this case it's simply the opposite of normal dispersion, where red light travels faster than blue light in a material.} It is often found paired with an absorption such as that of aluminum, shown in Fig.~\ref{introduction:fig:aluminum-dip}.
+Anomalous dispersion can be counterbalanced by something called the \emph{Kerr effect} in order to create a soliton, whereas normal dispersion can't.
+This is why anomalous dispersion is an interesting subject of research.
+
+Aluminum itself is not a good material for transporting solitons, for the simple reason that it is opaque and therefore not very good at transporting light pulses.
+However, aluminum paired with another material could create some of the conditions for a surface plasmon soliton! It is with this in mind that we conducted the research described in chapters~\ref{ch:drudium},~\ref{ch:kretschmann}, and~\ref{ch:otto}.
+
+Chapter~\ref{ch:drudium} is a discussion of how to conduct and interpret surface plasmon measurements.
+We discovered in the course of our aluminum research that one of the usual methods for probing surface plasmons, called the \emph{Kretschmann configuration}, does not work as well for surface plasmons on aluminum as it does for gold and silver.
+The aluminum measurements are more difficult to interpret, so one of the new findings of chapter~\ref{ch:drudium} is an effective method of interpreting them.
+We also find that a different arrangement of the experiment, called the \emph{Otto configuration}, is actually quite useful under these circumstances, even though it is usually considered less effective than the Kretschmann configuration.
+
+In chapter~\ref{ch:kretschmann}, we demonstrate the first measurements of anomalous dispersion for surface plasmons, and in chapter~\ref{ch:otto}, we show how cooling down the aluminum with liquid nitrogen enhances the effect quite a bit.
+With this discovery, we are one step closer to creating a surface plasmon soliton and the Flatland analog to fiber-optic technology.
+
+\newthought{The common theme} through all of this research is finding and exploring the Flatland equivalents of phenomena from optics in the normal, three-dimensional world, such as solitons.
+We also exploit Flatland effects to bring about other phenomena in three-dimensional optics, such as spin-to-orbit conversion.
+In the future, as surface plasmons become more and more important, from antennas to sensors to curing cancer, technology will move more into Flatland.
+For this, we need to have a Flatland `engineering toolbox' that is as complete as our three-dimensional engineering toolbox that has been filled gradually over the past few centuries.
+
+\chapter{Introduction}
+
+\marginnote{This chapter is a short scientific introduction to the work described in this thesis.
+Readers interested in an introduction accessible to non-scientists should turn to page~\pageref{ch:summary}.}
+
+\sectionstart{A surface plasmon} is a light wave bound to a metal surface, first predicted in 1957 as a side-effect of  bombarding metal films with fast electrons \cite{Ritchie1957} and observed two years later \cite{Powell1959}.
+Surface plasmons occur in many different geometries of metal, from nanoparticles \cite{Moskovits1985} to flat metal surfaces.
+This dissertation is about the latter type, which propagates along the two-dim\-en\-sion\-al metal surface, as opposed to `normal' light which travels through three-dim\-en\-sion\-al space, as a sort of two-dimensional light wave \cite{Bell1975,Bozhevolnyi1997,Ditlbacher2002}.
+The surface plasmon's restriction to the metal surface allows us to send optical signals through channels of extremely small size \cite{Maier2005,GarciaVidal2006}.
+
+\section{Devices using subwavelength slits in metal films}
+
+\sectionstart{It has been known for some time} \cite{Jasperson1969,SanchezGil1999,Lalanne2005,Schouten2005} that a very narrow slit or scratch in a thin metal film, under certain circumstances, can convert incident light with the correct polarization into surface plasmons, and vice versa.
+Which metal is used makes an important difference.
+
+Such conversions take a three-dimensional optical mode and change it to a corresponding two-dimensional one, and back again \cite{Altewischer2002}.
+This conversion is sensitive to the mode's local phase front.
+This influence of phase, and the aforementioned sensitivity to polarization, allow all sorts of surface plasmon effects having to do with polarization, phase, or both.
+
+In chapter~\ref{qwp:chapter}, taking a metal film made of gold, 200 nm thick, we examine how much light is transmitted through slits of varying thicknesses from 50 to 500 nm, and how this transmitted light is polarized.
+Surface plasmons are excited at one particular polarization, and we exploit this to control the polarization of the transmitted light.
+At a certain slit width and film thickness, the slit turns out to be able to convert linearly polarized light into circularly polarized, and vice versa.
+We also developed a simple model that explains this phenomenon in an intuitive way, by viewing the slit as a waveguide with imperfectly conducting walls, albeit a very short one.
+Our approach provides a convenient way to implement the functionality of a quarter-wave plate at a very small scale.
+
+We exploit this phenomenon again in chapter~\ref{soc:chapter}; this time with circular slits, where the slit creates an optical vortex from circularly polarized light, thereby converting optical spin angular momentum \cite{Beth1936} to optical orbital angular momentum \cite{Allen1992}.
+This curious interaction due to symmetry has been studied in birefringent materials \cite{Ciattoni2003,Marrucci2006}, space-variant gratings \cite{Bomzon2001,Lombard2010}, and even in electron beams \cite{Karimi2012}.
+
+Chapter~\ref{ch:tomography} describes an experiment with two very narrow slits milled parallel to each other in a very thin gold film.
+One slit is illuminated with light, and at the slit it is partly converted to surface plasmons.
+The surface plasmons travel across the film to the other slit, where they are converted once again into light, and we record the light intensity distribution; during transit, the shape of the plasmon wavefront changes due to diffraction.
+We use this diffraction to retrieve information about the incident light's phase; the phase cannot be measured directly, a well-known problem in physics \cite{Fienup1982}, and is usually probed using interference with a second light beam \cite{Baranova1981}.
+In order to demonstrate this technique, we measure the phase of beams containing various optical vortices.
+This technique could produce a wavefront sensor with a much higher spatial resolution than achievable with the usual techniques, which could be interesting for astronomy and \smallcaps{UV} lithography.
+
+\section{Anomalous dispersion of surface plasmons}
+
+\sectionstart{Dispersion is the phenomenon} of the velocity of light in a material depending on the light's wavelength.
+For example, if we send a pulse of red light and a pulse of blue light into a glass brick at the same instant, they will emerge from the other side at different times.
+Usually the red light arrives earlier than the blue light (which is called ``normal dispersion''), but sometimes the reverse is true: ``anomalous'' dispersion.
+Anomalous dispersion is a prerequisite for solitons, light pulses that can travel a long distance without changing their shape.
+Anomalous dispersion is needed to balance the normal dispersion caused by the other prerequisite for solitons, the Kerr effect.
+When the two occur together, they can cancel each other out, allowing a pulse that propagates without changing.
+There have been several, mainly mathematical, proposals for surface plasmon soliton pulses in recent years.%
+%%%%%%% TWEAK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\citeoffset{-50pt}{Feigenbaum2007,Bliokh2009,Davoyan2009,Samson2011,Marini2011,Walasik2012}
+
+Anomalous dispersion mostly occurs in the neighborhood of wavelengths that the material absorbs.
+An ideal metal behaves according to the free-electron model, or Drude model, where there are no absorptions, and the dispersion is always normal, in the frequency region of metallic behavior.
+However, the metal aluminum has an absorption in the near infrared \cite{Strong1936,Bennett1963}, a so-called parallel-band absorption \cite{Harrison1966}, which we aim to exploit.
+In the second part of this work, we try to answer the question of whether this absorption also causes surface plasmons on an aluminum surface to have anomalous dispersion.
+We probe this using a method where the surface plasmons are excited by incoming light from a prism.
+This technique has two variations, named after the German physicists Kretschmann \cite{Kretschmann1971} and Otto \cite{Otto1968}.
+The Otto configuration is generally considered to be disadvantageous compared to the Kretschmann configuration.
+In chapter~\ref{ch:drudium}, we show that that is a misconception.
+In addition, we introduce a method of analysis with which we can properly interpret experimental results using lossy metals in both configurations, which is impossible with the usual approach.
+
+Chapters~\ref{ch:kretschmann} and~\ref{ch:otto} describe the results of measuring surface plasmons with anomalous dispersion.
+In chapter~\ref{ch:kretschmann} we demonstrate the existence of surface plasmons with anomalous dispersion on an aluminum surface.
+Subsequently, in chapter~\ref{ch:otto}, we increase the degree of anomalous dispersion (expressed in the second-order dispersion parameter) by a great deal, by cooling the metal to near the temperature of liquid nitrogen, approximately 86 K.
+However, there is a tradeoff between more anomalous dispersion and more surface plasmon loss, because the surface plasmons decay more quickly in the low-temperature metal: the parallel-band absorption also becomes stronger at low temperatures \cite{Liljenvall1971,Mathewson1972a}.

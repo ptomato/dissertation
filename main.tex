@@ -1,0 +1,240 @@
+% !TEX program = xelatex
+\RequirePackage[no-math]{fontspec}
+
+\documentclass[twoside,nobib,nols,nofonts,justified,symmetric,citation=raggedouter,sidenote=raggedouter,caption=raggedouter,marginnote=raggedouter]{tufte-book}
+% Add symmetric option only at the very end, because tufte does not always guess
+% whether a float is on a verso or recto. Force with \forceversofloat and
+% \forcerectofloat just before printing. Also change marginals to raggedouter.
+
+% Change B5 paper to "B5" paper
+\geometry{papersize={170mm,240mm},%
+  left=20mm,%
+  top=17mm,%
+  textwidth=101.6mm,%
+  marginparsep=4mm,%
+  marginparwidth=36mm,%
+  headsep=5mm,%
+  textheight=40\baselineskip,%
+  heightrounded%
+}
+
+% Get rid of "**WARNING**: Failed to convert input string to UTF16"
+\hypersetup{pdfencoding=auto}
+
+% Chapters currently working on
+% \includeonly{chapters/otto,chapters/otto-appendix}
+
+% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath} % for \text, \align*
+\usepackage{amsbsy} % for \boldsymbol
+\usepackage{graphicx} % for \includegraphics
+\usepackage[dutch,american]{babel} % for style=apa and Dutch front matter
+\usepackage{csquotes} % for style=apa
+\usepackage{import} % for importing Inkscape PDFs
+\usepackage{bookmark} % for resetting PDF bookmarks to root level
+% \usepackage[a4,center,frame,cam]{crop} % for proofing - outline B5 page on A4 paper
+
+% PACKAGES REQUIRING CUSTOMIZATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Biblatex
+\usepackage[backend=biber,style=apa,autocite=footnote,autopunct,uniquename=false]{biblatex}
+% biblatex style customization
+\renewcommand\maxprtauth{99}  % Don't truncate author list in bibliography
+\DeclareLanguageMapping{american}{american-apa}
+\let\origcite\cite % Save biblatex's original \cite command
+\renewcommand\cite[2][]{\autocite[#1]{#2}}
+\DeclareAutoCiteCommand{footnote}[l]{\footcite}{\footcites}
+% Set URLs in mono type, none of this bullshit with numerals being in roman
+% (where did that come from anyway?!)
+\urlstyle{tt}
+% Define small caps style
+\newcommand\smallcapsnospace[1]{\scshape\addfontfeatures{SmallCapsFeatures={LetterSpace=0}}{\MakeTextLowercase{#1}}}
+
+\input{bib-inc.tex}
+
+% Glossaries
+\usepackage[acronym]{glossaries}
+% glossary customization: expand acronyms in margin notes
+\renewcommand*{\CustomAcronymFields}{%
+  text={\textsc{\the\glsshorttok}},%
+  plural={\textsc{\the\glsshorttok}\noexpand\acrpluralsuffix}%
+}
+\renewcommand*{\SetCustomDisplayStyle}[1]{%
+  \defglsdisplayfirst[#1]{##1##4\protect\marginnote{\textbf{##1}: \glsentrylong{\glslabel}}}%
+  \defglsdisplay[#1]{##1##4}%
+}
+\SetCustomStyle
+\makeglossaries
+
+% Silence - filter out harmless warnings
+\usepackage{silence}
+\WarningFilter{latex}{Marginpar on page} % Yeah, OK, I get it!!
+\WarningFilter{glossaries}{No \printglossary or \printglossaries found.} % Won't use
+\WarningFilter{biblatex}{Patching footnotes failed.} % Bug??!
+%\WarningFilter{csquotes}{Using preliminary} % OK, polyglossia is experimental
+
+% FONTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{fonts-inc.tex}
+
+% DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newlength\pagewidth
+\setlength\pagewidth{\textwidth+\marginparsep+\marginparwidth}
+
+% Provisional abstract environment, FIXME later
+\newenvironment{abstract}%
+	{\begin{fullwidth}\begin{flushright}\raggedleft\itshape}%
+	{\end{flushright}\end{fullwidth}}
+
+% Provisional chapter appendix environment, FIXME later
+\makeatletter
+\newenvironment{appendices}%
+  {\setcounter{section}{0}%
+  \renewcommand\thesection{Appendix \thechapter .{\scshape\@alph \c@section}}}%
+  {\renewcommand\thesection{\thechapter .\@arabic \c@section}}
+\makeatother
+
+% http://tex.stackexchange.com/questions/13756/quote-environment-with-reference-at-the-end-right
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+\newcommand\attribution[1]{\begin{flushright}\raggedleft\itshape---#1\end{flushright}}
+\renewenvironment{quote}{\list{}{\leftmargin=0mm\rightmargin=0mm}\item[]}{\endlist}
+
+% Definitions
+\newcommand{\nonumberchapter}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}\markboth{#1}{#1}}
+\newcommand{\unit}[1]{\mbox{$\;\mathrm{#1}$}}
+\newcommand{\micron}{\mbox{$\;\text{\textmu m}$}} % special case of \unit
+\newcommand{\TM}{\text{TM}} % for convenience
+\newcommand{\TE}{\text{TE}}
+\newcommand{\SP}{\mathrm{SP}}
+\newcommand{\epsm}{\varepsilon_\mathrm{m}}
+\newcommand{\epsd}{\varepsilon_\mathrm{d}}
+\newcommand{\half}{\mbox{$\frac{1}{2}$}}
+\newcommand{\boxfrac}[2]{\mbox{$\frac{#1}{#2}$}}
+\newcommand{\FF}{\text{FF}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\uvect}[1]{\hat{\vect{#1}}}
+\newcommand{\ux}{\uvect{x}}
+\newcommand{\uy}{\uvect{y}}
+\newcommand{\uz}{\uvect{z}}
+\newcommand{\ur}{\uvect{r}}
+\newcommand{\ut}{\uvect{\theta}}
+\newcommand{\usigma}{\uvect{\sigma}}
+\newcommand{\rect}[1]{\Pi\left(#1\right)}
+\newcommand{\invsq}{\frac{1}{\sqrt{2}}}
+\newcommand{\iinvsq}{\frac{i}{\sqrt{2}}}
+\newcommand{\rsep}{\text{\script r}}
+\newcommand{\vrsep}{\pmb{\text{\script r}}}
+\newcommand{\ursep}{\hat{\vrsep}}
+\newcommand{\cv}[1]{\tilde{\vect{#1}}}
+\newcommand{\cE}{\cv{E}}
+\newcommand{\cA}[1]{\cE_{0,\mathrm{#1}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand\fourier[1]{\text{\calligraphicfont F}\left\{#1\right\}}
+\newcommand{\NA}{\mbox{\em NA}}
+\newcommand\revcomment[1]{\marginnote{\color{Maroon}\bfseries #1}}
+\newcommand{\cvect}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newcommand{\abcdmatrix}[4]{\begin{bmatrix}#1&#2\\#3&#4\end{bmatrix}}
+\newcommand{\SPR}{\mathrm{SPR}}
+\newcommand{\kspinf}{{k_\SP^\infty}}
+\newcommand{\kxinf}{{k_x^\infty}}
+\newcommand{\zoteroacronym}[1]{\textsc{\MakeTextLowercase{#1}}}
+\newcommand\citeoffset[2]{\sidenote[][#1]{\origcite{#2}.}}
+
+% Hyphenation
+\hyphenation{nano-slits bor-o-sil-i-cate dif-frac-tion wave-num-ber Kretsch-mann nano-struct-ure re-flect-ance line-width}
+
+% Acronyms
+\newacronym{NA}{na}{numerical aperture}
+\newacronym{TE}{te}{transverse electric}
+\newacronym{TM}{tm}{transverse magnetic}
+\newacronym{CCD}{ccd}{charge-coupled device}
+\newacronym{PSF}{psf}{point-spread function}
+\newacronym{SPR}{spr}{surface plasmon resonance}
+\newacronym{DC}{dc}{direct current}
+
+% Metadata
+\title{Two-dimensional\\optics}
+\subtitle{Diffraction and dispersion\\of surface plasmons}
+\author{Philip F. Chimento}
+\publisher{Casimir Research School, Delft, The Netherlands}
+% Correct title, the linebreak in the \title doesn't work
+\hypersetup{pdfinfo={Title={Two-dimensional optics}}}
+
+\addbibresource{bibliography/library.bib}
+
+\pagenumbering{roman} % doesn't matter, page numbers not shown anyway
+
+\begin{document}
+\frontmatter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{frontmatter}
+
+\mainmatter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}  % Tufte doesn't do this, but we want it
+
+% Follow each chapter with \glsresetall to define all the acronyms at the
+% occasion of their first use each chapter
+
+% Tweaks: 2
+\include{chapters/introduction}
+\glsresetall
+
+\include{part1}
+
+% Tweaks: 1
+\include{chapters/qwp}
+\begin{appendices}
+\include{chapters/qwp-appendix}
+\end{appendices}
+\glsresetall
+
+% Tweaks: 1
+% Bad vboxes: 1
+\include{chapters/soc}
+\begin{appendices}
+\include{chapters/soc-appendix}
+\end{appendices}
+\glsresetall
+
+% Tweaks: 1
+\include{chapters/tomography}
+\glsresetall
+
+\include{part2}
+
+% Tweaks: 4
+\include{chapters/drudium}
+\begin{appendices}
+\include{chapters/drudium-appendix}
+\end{appendices}
+\glsresetall
+
+% Bad vboxes: 1
+\include{chapters/kretschmann}
+\begin{appendices}
+\include{chapters/kretschmann-appendix}
+\end{appendices}
+\glsresetall
+
+\include{chapters/otto}
+\begin{appendices}
+\include{chapters/otto-appendix}
+\end{appendices}
+\glsresetall
+
+\backmatter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bookmarksetup{startatroot} % Following chapters are not part of Part II
+
+% Redefine 'bibintoc' heading so that it doesn't capitalize the running head
+\defbibheading{bibintoc}[\bibname]{%
+    \chapter*{#1}%
+    \addcontentsline{toc}{chapter}{#1}%
+    \markboth{#1}{#1}}
+{\raggedright
+\printbibliography[heading=bibintoc]}
+
+\include{backmatter}
+
+\end{document}

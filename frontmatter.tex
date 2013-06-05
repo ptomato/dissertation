@@ -1,0 +1,205 @@
+% Plain title page, recto 1
+\maketitle
+
+% Copyright page, verso 2
+\clearpage\thispagestyle{empty}
+\begin{fullwidth}
+	~\vfill
+
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{\baselineskip}
+
+	% \begin{otherlanguage}{dutch}
+	% 	\raggedright\noindent\sffamily
+	% 	\MakeTextUppercase{\textbf{Tweedimensionale optica:} diffractie en dispersie bij oppervlakteplasmonen}
+	% \end{otherlanguage}
+	% \vspace{1cm}
+
+	Copyright \copyright\ \the\year\ \thanklessauthor
+
+	Published by \thanklesspublisher
+
+	Cover design: \thanklessauthor
+
+	Printed by Gildeprint Drukkerijen, The Netherlands
+
+	\smallcaps{ISBN:} 978-90-8593-155-3
+\end{fullwidth}
+
+% Full title page, recto 3
+\clearpage\thispagestyle{empty}
+\begin{fullwidth}
+\begin{center}
+	\Large
+	{\par\sffamily\fontsize{28}{32}\selectfont\par
+	TWO-DIMENSIONAL OPTICS}
+
+	{\par\sffamily\fontsize{18}{22}\selectfont\par
+	DIFFRACTION AND DISPERSION\\ OF SURFACE PLASMONS}
+
+	\vfill
+	Proefschrift
+
+	\vspace{2\baselineskip}
+	ter verkrijging van
+
+	de graad van Doctor aan de Universiteit Leiden
+
+	op gezag van Rector Magnificus prof.mr. C.J.J.M. Stolker,
+
+	volgens besluit van het College voor Promoties
+
+	te verdedigen op woensdag 22 mei 2013
+
+	klokke 11:15 uur
+
+	\vspace{2\baselineskip}
+	door
+
+	\vspace{\baselineskip}
+	Philip Chimento
+
+	geboren te Raleigh, North Carolina, Verenigde Staten
+
+	in 1981
+\end{center}
+\end{fullwidth}
+% \begin{fullwidth}
+% 	\sffamily
+% 	\fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}
+% 	\vspace{11.5pc}
+% 	\fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}
+% \end{fullwidth}
+% \vfill
+
+% \begin{otherlanguage}{dutch}
+% 	\raggedright
+% 	% Temporarily change \parskip
+% 	\setlength{\parskip}{1em}
+% 	\setlength{\parindent}{0em}
+% 	\newthought{Proefschrift} ter verkrijging van de graad van doctor aan de Universiteit Leiden, op gezag van rector magnificus prof.~mr.~C.~J.~J.~M.\ Stolker, volgens besluit van het college voor promoties te verdedigen op
+% 	\makebox[2em]{\hrulefill}dag
+% 	\makebox[6em]{\hrulefill} 2013 klokke
+% 	\makebox[3em]{\hrulefill} uur
+
+% 	\newthought{Door} ir.\ Philip Francis Chimento \textsc{iii}, geboren te Raleigh, North Carolina, Verenigde Staten in 1981
+% \end{otherlanguage}
+
+% Promotiecommissie, verso 4
+\clearpage\thispagestyle{plain}
+\begin{fullwidth}
+\begin{otherlanguage}{dutch}
+\noindent\textsf{\fontsize{18}{20}\selectfont\allcaps{Promotiecommissie}}\vspace{5mm}
+
+\noindent
+\begin{tabular}{lll}
+Promotores:
+	& Prof.~dr.~E.~R.~Eliel & Universiteit Leiden \\
+	& Prof.~dr.~G.~W.~'t~Hooft & Philips Research \& Universiteit Leiden \\
+Leden:
+	& Dr.~M.~P.~van Exter & Universiteit Leiden \\
+	& Dr.~C.~Genet & Universit\'e de Strasbourg \\
+	& Prof.~dr.~J.~G\'omez Rivas & Philips Research \& \smallcaps{TU} Eindhoven \\
+	& Dr.~H.~L.~Offerhaus & Universiteit Twente \\
+	& Prof.~dr.~T.~D.~Visser & Vrije Universiteit \& \smallcaps{TU} Delft \\
+	& Prof.~dr.~J.~P.~Woerdman & Universiteit Leiden
+\end{tabular}
+\end{otherlanguage}
+\vfill
+
+
+{\parbox{\textwidth}{\raggedright
+% Temporarily change \parskip
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+This work is part of the research program of the Foundation for Fundamental Research on Matter (\smallcaps{FOM}), which is part of the Netherlands Organization for Scientific Research (\smallcaps{NWO}).
+
+An electronic version of this disseration is available at the Leiden University Repository (\url{https://openaccess.leidenuniv.nl}).
+
+Casimir PhD series, Delft-Leiden, 2013-14
+}}
+\end{fullwidth}
+
+% Dedication and Quotes, recto 5
+\cleardoublepage\thispagestyle{plain}
+
+~\vfill
+
+\begin{fullwidth}
+\begin{flushright}\itshape
+To caffeine
+
+To the future, let's hope it's worth saving
+
+% To my parents, Mahatma Gandhi and Ayn Rand, for teaching me punctuation
+
+% To the noble kangaroo
+
+% Dedicated to the hardest thing I ever did --- this was only the second hardest.
+
+% To Halbe ``I don't know much about science, but I know what I like'' Zijlstra
+
+% To House
+\end{flushright}
+\end{fullwidth}
+
+\vfill
+\vfill
+
+% \begin{fullwidth}
+% \begin{flushright}
+% \begin{minipage}{10.2cm}
+% \begin{quote}
+% % \foreignlanguage{german}{Kretschmann und Raether fanden beim Aufbringen einer rauhen Silberschicht in der [...]
+% % angegebenen Geometrie eine nach der Vakuumseite austretende Streustrahlung, die sie als Abstrahlung gestreuter Oberfl\"achenwellen deuten.}
+% Kretschmann and Raether, applying a rough silver layer in the [...] indicated geometry, found scattered radiation exiting from the vacuum side, which they interpreted as emission of scattered surface plasmons.
+% \signed{Otto, 1969}
+% \end{quote}
+% % \attribution{Andreas Otto, pooh-poohing the Kretschmann configuration by insinuating that Kretschmann couldn't tell rough from smooth}
+% \nocite{Otto1969}
+
+% \begin{quote}
+% Otto suggested this method of exciting surface plasmons using a prism.
+% He does not, however, bring the metal layer into contact with the prism, but instead introduces a thin air layer between the prism and the metal.
+% His arrangement is less advantageous for determining optical constants.
+% It is experimentally laborious, and a homogeneous air layer thickness, essential for the analysis, is very difficult to achieve.
+% Remarkably, Otto explicitly rules out our arrangement described here.
+% The figure [...], in which he calculates the reflection from a silver layer under total internal reflection from a prism, is [...] wrong.
+% % \foreignlanguage{german}{Diese Methode, mit Hilfe eines Prismas Oberfl\"achenwellen anzuregen, wurde von Otto vorgeschlagen.
+% % Er bringt die Metallschicht aber nicht in direkten Kontakt auf das Prisma, sondern sieht eine d\"unne Luftschicht zwischen Prisma und Metall vor.
+% % Seine Anordnung ist f\"ur die Bestimmung von optischen Konstanten weniger g\"unstig.
+% % Sie ist experimentell aufwendiger und eine f\"ur die Auswertung notwendige homogene Dicke der Luftschicht ist sehr schwer zu realisieren.
+% % Merkw\"urdigerweise schlie\ss{}t Otto die von uns hier angegebene Anordnung ausdr\"ucklich aus.
+% % Seine Figur [...], in der er die Reflexion an einer Silberschicht bei Totalreflexion an einem Prisma berechnet hat, ist [...] nicht richtig.}
+% \signed{Kretschmann, 1971}
+% \end{quote}
+% % \attribution{Erwin Kretschmann, pooh-poohing the Otto configuration with a straw-man argument about air layers}
+% \nocite{Kretschmann1971}
+
+% \begin{quote}
+% The objections to this device are due to an error.
+% \signed{Raether, 1988, p.\ 11}
+% \end{quote}
+% % \attribution{Heinz Raether, weighing in more tactfully}
+% \nocite{Raether}
+% \end{minipage}
+% \end{flushright}
+% \end{fullwidth}
+
+% Alternate dedication, recto 5
+% \includegraphics[width=65mm]{giotto-st-francis-stigmata.jpg}
+% \vspace{5mm}
+
+% {\parbox{9.5cm}{\itshape\raggedleft
+% Dedicated to Laser Jesus, who invented the laser in 1224 \textsc{ce}, although Ted Maiman is usually credited.
+% Above is Giotto di~Bondone's masterful illustration of Laser Jesus' groundbreaking experiment, which unfortunately severely injured Francis of Assisi, thereby demonstrating the importance of proper laboratory safety.}}
+% \vfill
+% {\noindent\small\href{http://commons.wikimedia.org/wiki/File%3AGiotto_di_Bondone_002.jpg}{Giotto [Public domain], via Wikimedia Commons}}
+% \end{flushright}
+% \end{fullwidth}
+
+% Table of contents, recto 7
+\pagestyle{plain}
+\begin{fullwidth}
+\tableofcontents
+\end{fullwidth}

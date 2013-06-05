@@ -1,0 +1,190 @@
+\section{Reciprocity of the slit transmission}
+\label{qwp:sec:correction-factor}
+
+\marginnote{This section is an appendix that did not appear in the published paper.}
+\sectionstart{We stated earlier in this chapter} that we corrected our model for the finite \gls{NA} of the detector in our experiment.
+The necessity of this correction was brought to our attention by an apparent violation of reciprocity in the experiment.
+In the experiments described in the foregoing sections, we illuminated the sample on the gold side (hereafter the `forward' configuration), but when we turned the sample around and performed the experiment again while illuminating it from the glass side (the `reverse' configuration), the results were different!
+
+This is, of course, not really a violation of reciprocity, but it is caused by the detector's \gls{NA}.
+The exit aperture of the slit is subwavelength, so it radiates in all directions, but not uniformly.
+The slit's scattering profile depends on the shape of the mode inside the slit, and also on the medium that the slit scatters into.
+Therefore, not all the radiation that actually exits the slit is emitted into the cone of angles that the detector can collect.
+Which fraction is collected by the detector depends on the circumstances, meaning that the two configurations cannot be compared directly without correcting for this effect.
+
+We assume that the detector is situated in air, with an index of refraction $n_4$.
+In the forward configuration, $n_1 = n_4$ and $n_3$ is the index of the glass substrate.
+Conversely, in the reverse configuration, $n_1$ is the index of the glass substrate and $n_3 = n_4$.
+
+\newthought{The slit supports one \gls{TM} and one \gls{TE} mode.}
+We treat the slit as a parallel-plate waveguide with metal walls in which we assume that higher-order modes do not propagate.
+The metal wall boundary is at $x = \pm w/2$.
+We call the complex amplitudes of the waveguide modes inside the slit $\cE_\TM (x, z)$ and $\cE_\TE (x, z)$.
+They depend on the permittivity $\epsilon$, the index of the slit material $n_2$, and the slit width $w$.
+
+To find the angular scattering profile of the modes, we take the Fourier transform of the mode profile at the exit aperture of the slit: $\cE_\TM (x, d)$ and $\cE_\TE (x, d)$.
+This gives us the scattered electric field amplitude $\cv{F}$ as a function of transverse wavenumber $k_x$.
+This is appropriate if the collection objective is in the far field of the slit.
+We estimate the Fresnel number $N_F$ using typical values for our experiment,
+%
+\begin{equation}
+N_F = \frac{a^2}{L\lambda} = \frac{w^2}{4L\lambda}
+\approx \frac{(5\times 10^{-7})^2}{4 \cdot 1\times 10^{-3} \cdot 8\times 10^{-7}}
+\approx \frac{25\times 10^{-14}}{32\times 10^{-10}} \ll 1,
+\end{equation}
+%
+which justifies the assumption of Fraunhofer diffraction at $1\unit{mm}$ distance from the slit. $L$ is in this case the working distance of the objective.
+
+The angle $\theta$ of the corresponding plane wave component is equal to
+\begin{equation}\label{qwp:eq:spatial-frequency-angle}
+\theta = \arcsin (k_x / n_3 k_0),
+\end{equation}
+where $k_0 = 2\pi/\lambda$ is the wavenumber in free space.
+We plot the angular scattering profiles for a $250\unit{nm}$ wide slit in Fig.~\ref{fig:scattering-profiles}a, calculated numerically by fast Fourier transform.
+%
+\begin{figure*}[tb]
+\centering\includegraphics{graphs/qwp/scattering-profile.pdf}
+\caption{(a) Scattering profile of a $250\unit{nm}$ wide slit, as a function of angle.
+(b) Transmission of scattered light at the $n_3$--$n_4$ interface as a function of scattering angle.
+Note the Brewster angle at the point where the \gls{TM} transmission reaches unity.
+Other parameters: $\lambda=800\unit{nm}$, $n_2=1.0$, $n_3=1.5$, $n_4=1.0$.}
+\label{fig:scattering-profiles}
+\end{figure*}
+
+In the forward configuration (light incident on the air side) described above, we have to take into account the Fresnel losses at the $n_3$--$n_4$ (glass-air) interface.
+Part of the scattered energy never leaves the glass substrate, due to total internal reflection.
+The \gls{TE} and \gls{TM} components are also transmitted differently, since there is a Brewster angle for \gls{TM}.
+
+For the transmission $T = 1 - R$, we write:
+\begin{equation}\label{eq:fresnel-te}
+T_\TE(\theta) = 1 - \left(
+	\frac{n_3\cos\theta - n_4\sqrt{1 - (\frac{n_3}{n_4}\sin\theta)^2}}
+		{n_3\cos\theta + n_4\sqrt{1 - (\frac{n_3}{n_4}\sin\theta)^2}}
+\right)^2
+\end{equation}
+\begin{equation}\label{eq:fresnel-tm}
+T_\TM(\theta) = 1 - \left(
+	\frac{n_3\sqrt{1 - (\frac{n_3}{n_4}\sin\theta)^2} - n_4\cos\theta}
+		{n_3\sqrt{1 - (\frac{n_3}{n_4}\sin\theta)^2} + n_4\cos\theta}
+\right)^2
+\end{equation}
+We plot these transmission profiles in Fig.~\ref{fig:scattering-profiles}b.
+They are independent of the slit width, or indeed any of the slit parameters.
+Also note that for $n_3=n_4$, $T=1$, as it should be since there is no interface in that case.
+
+The finite \gls{NA} of the detector means that not all of the scattered light is collected.
+Light outside a maximum acceptance angle $\theta_\mathrm{max}$ misses the detector.
+Due to Snell's law, $\NA=n_3\sin\theta_\mathrm{max}$, and therefore
+\begin{equation}
+\theta_\mathrm{max} = \arcsin(\NA/n_3),
+\end{equation}
+no matter what medium $n_4$ the detector is actually in.
+
+The detector signal, then, must be corrected by a factor
+\begin{equation}\label{eq:correction}
+C_i = \frac{ \displaystyle
+	\int_{-\theta_\mathrm{max}}^{\theta_\mathrm{max}}
+		T_i(\theta)
+		\left| \cv{F}_i (n_3 k_0 \sin\theta) \right|^2
+	d\theta
+}{ \displaystyle
+	\int_{-\pi/2}^{\pi/2}
+		\left| \cv{F}_i (n_3 k_0 \sin\theta) \right|^2
+	d\theta
+},
+\end{equation}
+where $i\in\{\TE, \TM\}$, which is the ratio of energy entering the detector to the total energy scattered from the slit.
+This factor depends on $\lambda$, $\epsilon$, $n_2$, $n_3$, $n_4$, $w$, and $\NA$.
+(It does not depend on $d$ or $n_1$; the factor containing $d$ can be taken outside the integrals and divided away, and $n_1$ only influences the coupling to surface plasmon modes on the front interface.)
+
+\newthought{In the experiment described in this chapter,} we take $\lambda$, $\epsilon$, $n_2$, and $n_4$ as design parameters, so we will not examine their influence on the correction factor.
+The index $n_3$ can take one of two values: for reverse illumination, $n_3 = n_4$, whereas for forward illumination $n_3 \neq n_4$.
+Since we are only interested in the ratio of \gls{TM} to \gls{TE} transmission, we will examine the ratio of the two correction factors $C_\TM/C_\TE$ in four situations: forward and reverse illumination, and for low and high \gls{NA}.
+
+We examine the ratio because the values of $C_\TM$ and $C_\TE$ individually are not particularly surprising; a high-\gls{NA} detector will collect more of the light in both forward and reverse illumination, obviously.
+Reverse illumination also causes more light to enter the detector, no matter the \gls{NA} because there is no total internal reflection loss at the $n_3$--$n_4$ interface, so $T_i(\theta) = 1$ in \eqref{eq:correction}.
+
+In Fig.~\ref{qwp:fig:correction-factors}a we plot the ratio $C_\TM/C_\TE$ for reverse illumination, calculated for two different numerical apertures.
+We see that the numerical aperture does not influence the shape of the curve very much.
+%
+\begin{figure*}[tbp]
+\centering\includegraphics{graphs/qwp/correction-factors.pdf}
+\caption{Ratio of the two \gls{NA} correction factors $C_\TM/C_\TE$: less than 1 means that the detector picks up more \gls{TE} light, more than 1 means the detector picks up more \gls{TM} light.
+It is plotted for two different \gls{NA} values: low ($\NA=0.2$, purple), and high ($\NA=0.8$, green).
+(a) Reverse illumination ($n_1 = 1.5$, $n_2 = n_3 = n_4 = 1.0$);
+(b) forward illumination ($n_1 = n_2 = n_4 = 1.0$, $n_3 = 1.5$).
+As usual, we take $\lambda=800\unit{nm}$.}
+\label{qwp:fig:correction-factors}
+\end{figure*}
+
+Forward illumination, for which the ratio of the correction factors is plotted in Figs.~\ref{qwp:fig:correction-factors}b, is quite different.
+If the detector has low \gls{NA}, it behaves much the same as in reverse illumination, with slightly more difference between \gls{TM} and \gls{TE}.
+In the high-\gls{NA} case, on the other hand, the detector picks up more \gls{TM} light than \gls{TE} light for almost every slit width: there is about a $6\%$ difference.
+A look at Fig.~\ref{fig:scattering-profiles} suggests that this happens when the \gls{NA} is large enough that $\theta_\mathrm{max}$ is large enough that it includes the Brewster angle at the $n_3$--$n_4$ interface, at which all the \gls{TM} light is transmitted and not all the \gls{TE} light.
+
+% \newthought{When performing a transmission} experiment on subwavelength slits of various widths, the model presented here suggests that the measured data must undergo a slight correction depending on the slit width.
+% In addition, the correction factor is different for \gls{TE} and \gls{TM} illumination of the slit, due to the difference between the scattering profiles of the lowest-order \gls{TE} and \gls{TM} modes.
+% However, even at high numerical aperture, the features in the wings of the scattering profile are not important enough to warrant a substantial correction.
+
+% The correction factor becomes more important when there is a dielectric interface between the exit aperture of the slit and the detector.
+% \gls{TE} and \gls{TM}-polarized light are transmitted differently through that interface, due to the existence of Brewster's angle.
+% At low numerical aperture, this does not have any influence, but at high numerical aperture, more \gls{TM} light is transmitted through the interface than \gls{TE} light.
+
+% Each of these two modes has its own propagation constant $\beta$, which are the solutions to these two eigenvalue equations:\cite[243]{SnyderLove}
+% %
+% \begin{equation}
+% \frac{W_\TE}{U_\TE} - \tan U_\TE = 0,
+% \end{equation}
+% %
+% \begin{equation}
+% \frac{n_2^2 W_\TM}{\epsilon U_\TM} - \tan U_\TM = 0,
+% \end{equation}
+% %
+% in which we use the dimensionless modal parameters $U_i = \frac{w}{2} \sqrt{k_0^2 n_2^2 - \beta_i^2}$, $W_i = \frac{w}{2} \sqrt{\beta_i^2 - k_0^2 \epsilon}$ as a shorthand, where $i \in \{\TE, \TM\}$.\cite[227]{SnyderLove}
+
+% \begin{equation}
+% \cE_\TE (x, z) =
+% \begin{cases}
+%   \exp \left(W_\TE(1 - 2\abs{x}/w) + i\beta_\TE z \right) \uy,
+%   & \abs{x} > w/2
+%   \\
+
+%   \displaystyle
+%   \frac{\cos(2U_\TE x/w) \exp(i \beta_\TE z)}{\cos U_\TE} \uy,
+%   & \abs{x} < w/2
+% \end{cases}
+% \end{equation}
+% %
+% \begin{equation}
+% \cE_\TM (x, z) =
+% \begin{cases}
+%   \frac{n_2^2}{\epsilon} \exp(W_\TM(1 - 2\abs{x}/w) + i\beta_\TM z) \ux,
+%   & \abs{x} > w/2
+%   \\
+
+%   \displaystyle
+%   \frac{\cos( 2U_\TM x/w) \exp(i \beta_\TM z)}{\cos U_\TM} \ux,
+%   & \abs{x} < w/2
+% \end{cases}
+% \end{equation}
+
+% The effective indices $n_\text{eff} = \beta / k_0$ are plotted in Fig.~\ref{fig:propagation-constants}.
+
+% %
+% \begin{figure}[tb]
+% \centering\includegraphics{graphs/qwp/effective-index}
+% \caption{Real and imaginary parts of the effective indices of refraction for the \gls{TE} and \gls{TM} modes as a function of slit width $w$.
+% Other parameters: $\lambda=800\unit{nm}$, $n_2=1.0$.
+% }
+% \label{fig:propagation-constants}
+% \end{figure}
+
+% Example mode profiles at the slit exit for a very thin slit, a medium-width slit, and a slit wider than $\lambda/2$ are shown in Fig.~\ref{fig:waveguide-modes}.
+% %
+% \begin{figure*}[tb]
+% \centering\includegraphics{graphs/qwp/waveguide-modes.pdf}
+% \caption{Waveguide modes in three gold slits of different widths.
+% (a) $w=50\unit{nm}$, (b) $w=250\unit{nm}$, (c) $w=500\unit{nm}$.
+% Other parameters: $\lambda=800\unit{nm}$, $n_2=1.0$.}
+% \label{fig:waveguide-modes}
+% \end{figure*}

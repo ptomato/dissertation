@@ -1,0 +1,104 @@
+% !TEX program = xelatex
+
+\documentclass[10pt]{stellingen}
+\renewcommand\titlestyle[1]{{\LARGE\sffamily\MakeTextUppercase{#1}}}
+\renewcommand\numberingstyle[1]{{\bfseries\sffamily #1}}
+\renewcommand\sourcestyle[1]{{\footnotesize\emph{#1}}}
+\setlength\topsep{0pt}
+
+% FONTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{fonts-inc.tex}
+
+% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english,dutch]{babel}
+% babel/polyglossia/mathspec workaround: github:fc7/polyglossia #28
+\makeatletter
+\begingroup
+  \catcode`\"=\active
+  \AtBeginDocument{\let"=\eu@active@quote}
+\endgroup
+\makeatother
+% \usepackage[a4,center,frame]{crop} % for proofing - outline A5 page on A4 paper
+
+% DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\smallcaps[1]{{\scshape\MakeTextLowercase{#1}}}
+
+\begin{document}
+
+\title{Two-dimensional optics}
+\author{Philip F.~Chimento}
+\maketitle
+
+% ABOUT THIS THESIS
+
+\begin{stelling}[Hoofdstuk 3 van dit proefschrift]
+De topologische lading van een optische veldverdeling in een transversaal vlak en de verwachtingswaarde van het baanimpulsmoment per foton zijn niet aan elkaar gelijk, behalve bij axiale symmetrie.
+\end{stelling}
+
+\begin{stelling}[Hoofdstuk 4 van dit proefschrift]
+Twee nanospleten in een goudfilm kunnen dienen als golffrontsensor met een veel betere ruimtelijke resolutie dan de Shack-Hartmannsensor, die in het algemeen hiervoor wordt gebruikt.
+\end{stelling}
+
+\begin{stelling}[Hoofdstuk 5 van dit proefschrift]
+De demping van een aangedreven oscillator, en de geleidbaarheid van het metaal bij oppervlakteplasmonresonantie, geven een gelijksoortige afwijking van hun maximale respons.
+\end{stelling}
+
+\begin{stelling}[Hoofdstuk 5 van dit proefschrift]
+Het is een misverstand dat de Ottoconfiguratie voor de bestudering van oppervlakteplasmonresonanties alleen maar lastig is.
+\end{stelling}
+
+% ABOUT THE FIELD OF PLASMONICS AND OPTICS
+
+\begin{stelling}[Fridman et al.\ (2012). \emph{Nature 481}, 62.]
+Temporele optische camouflage van een gebeurtenis zal alleen in combinatie met extreem langzaam licht de waarneming door menselijke ogen kunnen verhinderen.
+\end{stelling}
+
+\begin{stelling}[Couder et al.\ (2005). \emph{Nature 437}, 208.]
+Wandelende druppeltjes zijn een goede illustratie van de \emph{\foreignlanguage{english}{pilot wave}} theorie op macroscopische schaal.
+\end{stelling}
+
+\begin{stelling}
+Dat een infraroodfilter ontbreekt bij goedkope \smallcaps{ccd} camera's heeft een voordeel: met een laptop of draagbare telefoon kan men controleren of de afstandsbediening nog werkt.
+\end{stelling}
+
+\begin{stelling}[Horv\'ath et al.\ (2010). An unexpected advantage of whiteness in horses: the most horsefly-proof horse has a depolarizing white coat. \emph{Proc.\ R.\ Soc.\ B 277}(1688), 1643--1650.]
+Er is een verband tussen de kleur van een voorwerp en de mate van polarisatie van het licht dat het verstrooit.
+\end{stelling}
+
+% ABOUT WHATEVER
+
+% \begin{stelling}[Gottschall \& Gottschall (2003). Are per-incident rape-pregnancy rates higher than per-incident consensual pregnancy rates? \emph{Human Nature 14}(1), 1--20; Renfree \& Shaw (2000). Diapause. \emph{Ann.\ Rev.\ Physiology 62}(1), 353--375.]
+% \end{stelling}
+
+\begin{stelling}[Foremski (10 juni 2005). Exclusive interview with seminal 1960s computer visionary Doug Engelbart. \emph{Silicon Valley Watcher.}]
+Dat de datawolk niet al veertig jaar bestaat, is een gevolg van het wantrouwen van de babyboom-generatie tegenover centralisatie.
+\end{stelling}
+
+\begin{stelling}[Amiss \& Abbott (1995). \emph{Method of exercising a cat.} United States Patent nr.\ 5443036.]
+Met een laserpointer kan men de mechanische aangeslagen toestanden van een kat stimuleren, en hun eigenfrequenties bepalen.
+\end{stelling}
+
+% \begin{stelling}[Artikel 18, lid 7, Promotiereglement Universiteit Leiden 2008]
+% Het verbod op reclame in proefschriften is in strijd met de wens van de Nederlandse overheid om de lasten van onderzoekssubsidie op de schouders van de industrie te leggen.
+% (Zo had ik de omslag van dit proefschrift willen laten sponsoren door Heinz Plasmon Biscuits.)
+% \end{stelling}
+
+% \begin{stelling}
+% Het streven van \smallcaps{LION} om excellente studenten zo vroeg mogelijk in aanraking te laten komen met `echt' onderzoek, strookt niet met het bachelorcurriculum, waar studenten leren data te verwerken in Origin.
+% \end{stelling}
+
+% \begin{stelling}
+% Samen een artikel schrijven na ruzie in de literatuur is het equivalent voor hoogleraren van make-up seks. \emph{Corollarium:} Dat zijn altijd de beste artikelen.
+% \end{stelling}
+
+\begin{stelling}
+Wetenschappers die hun onderzoek niet toevertrouwen aan de mogelijk klunzige handen van studenten, kunnen beter aan een onderzoeksinstituut werken dan aan een universiteit.
+\end{stelling}
+
+% \begin{stelling}
+% Geen enkel beleid om het aandeel vrouwelijke hoogleraren te verhogen zal helpen, als de oude bokken nog vrij spel hebben om jonge vrouwen zich niet op hun plaats te laten voelen in de fysica.
+% \end{stelling}
+
+\end{document}

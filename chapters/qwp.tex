@@ -1,0 +1,325 @@
+\chapter{A subwavelength slit as a quarter-wave retarder}
+\label{qwp:chapter}
+
+%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+We have experimentally studied the polarization-dependent transmission properties of a nanoslit in a gold film as a function of its width.
+The slit exhibits strong birefringence and dichroism.
+We find, surprisingly, that the transmission of the polarization parallel to the slit only disappears when the slit is much narrower than half a wavelength, while the transmission of the perpendicular component is reduced by the excitation of surface plasmons.
+We exploit the slit's dichroism and birefringence to realize a quarter-wave retarder.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\marginnote{This chapter was previously published as: \textcite{Chimento2011}.}
+\sectionstart{The study of the transmission of light} through small perforations in metal films has a venerable history \cite{Rayleigh1897,Bethe1944,Bouwkamp1954,Jones1954} and has important applications in the field of optical data storage \cite{BouwhuisBraat}.
+It dates back to the middle of the nineteenth century when Fizeau described the polarizing effect of wedge-shaped scratches in such films \cite{Fizeau1861}.
+
+This field has recently come back to center stage following the observation that, at a specific set of wavelengths, the transmission of a thin metal film containing a regular two-dimensional array of subwavelength apertures is much larger than elementary diffraction theory predicts \cite{Ebbesen1998}.
+This phenomenon of extraordinary optical transmission, which is commonly attributed to surface plasmons traveling along the corrugated interface, has spawned many studies of thin metal films carrying variously-shaped corrugations and perforations.
+These include holes with circular, cylindrical, or rectangular cross sections \cite{Astilean2000}, either individually or in arrays, and elongated slits \cite{Takakura2001,Yang2002,Suckling2004}.
+The polarization of the incident light is an important parameter, in particular when the width of the hole or slit is subwavelength in one or both directions.
+The case of a slit which is long in one dimension and subwavelength in the other seems particularly simple, as elementary waveguide theory predicts that it acts as a perfect polarizer when the slit width is less than about half the wavelength of the incident light.
+
+For infinitely long slits, one can define \gls{TE} and \gls{TM} polarized modes.
+The \gls{TM} mode's electric field vector is perpendicular to the long axis of the slit, and the \gls{TE} mode has its electric field vector parallel to the long axis.
+In standard waveguide models, the metal is usually assumed to be perfect, so that the continuity equation for the electric field implies that its parallel component must be zero at the metallic boundaries.
+In a slit geometry, this implies that \gls{TE}-polarized light incident on such a slit will not be transmitted by the structure if the wavelength $\lambda$ of the incident light is larger than twice the slit width $w$.
+This width is commonly referred to as the cutoff width.
+The \gls{TM}-polarized mode, on the other hand, can propagate unimpeded through the slit, the effective mode index increasing steadily as the width is reduced \cite{Astilean2000,Takakura2001}.
+For this reason one expects very narrow slits in metal films to act as perfect polarizers \cite{Fizeau1861}.
+
+While the perfect metal model is an excellent approximation for wavelengths in the mid to far infrared or microwave domains, the model is too na\"ive when the wavelength of the incident light is smaller, because of the dispersion in the permittivity of metals.
+As a consequence, in the visible part of the spectrum the \gls{TE} mode cutoff width of real metals like silver and aluminum is slightly smaller than $\lambda/2$ \cite{Schouten2003,Schouten2004}, and the cutoff is more gradual.
+Although the \gls{TM} mode propagates through the slit, it couples to surface plasmon modes on the front and back surfaces of the slit \cite{Schouten2005}, which act as a loss channel.
+Since these losses are heavily dependent on the slit width \cite{Lalanne2006,Baudrion2008,Kihm2008}, the transmitted intensity of the \gls{TM} mode is more dependent on this width than the perfectly conducting waveguide model predicts.
+
+Here we demonstrate that, for thin metal films, such a nanoslit also acts as an optical retarder, and that the \gls{TE}/\gls{TM} transmission ratio is around unity well below the cutoff width, approaching zero only when the slit is extremely narrow.
+We have employed these properties to turn such a slit into a quarter-wave retarder.
+
+%###################################################################################################
+\section{Description of experiment}
+
+\sectionstart{In the experiment, shown schematically} in Fig.~\ref{Fig:setup}, we illuminate an array of ten $10\micron$ by $50$--$500\unit{nm}$ slits with a laser beam at $\lambda=830\unit{nm}$, at normal incidence (see Fig.~\ref{qwp:fig:sample}.)
+For all practical purposes, each slit's length can be considered infinite compared to its width and the laser wavelength.
+The slits are milled through a $200\unit{nm}$ thick gold film using a focused $\text{Ga}^+$ ion beam.
+The slits' widths increase stepwise from $50\unit{nm}$, well below the cutoff width for \gls{TE}-polarized light, to $500\unit{nm}$, at which value the lowest \gls{TE} mode can propagate through the slit.
+The film is deposited on a $0.5\unit{mm}$ thick Schott \smallcaps{D263T} borosilicate glass substrate, covered by a $10\unit{nm}$ titanium adhesion layer which damps surface plasmons, ensuring that their propagation length is negligibly short on the gold-glass interface.
+The laser beam width at the sample is approximately $4\unit{mm}$ so that, effectively, the structure is illuminated homogeneously with a flat wavefront.
+The light transmitted by the structure is imaged on a \gls{CCD} camera (Apogee Alta \smallcaps{U1}) by means of a $0.65$ \gls{NA} microscope objective.
+The polarization of the light incident on the structure is controlled by a combination of half-wave and quarter-wave plates, enabling us to perform the experiment with a variety of input polarizations.
+%
+% FIGURE
+%
+\begin{figure}[tb]
+\centering\centering\import{illustrations/qwp/}{illustrations/qwp/Setup.pdf_tex}
+\caption{Sketch of the experimental setup.
+\textsc{hwp}: half-wave plate, \textsc{qwp}: quarter-wave plate, \textsc{lp}: linear polarizer.
+The sample (see Fig.~\ref{qwp:fig:sample}) is illuminated on the gold side, using light with a controlled polarization.
+The transmitted light's polarization is analyzed for each pixel of a \glstext{CCD} camera.
+The Stokes analyzer consists of a quarter-wave plate and a linear polarizer, which can be rotated independently of each other under computer control to any desired orientation.}
+\label{Fig:setup}
+\end{figure}
+%
+%%%%%%%% TWEAK %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[b]
+\centering\import{illustrations/qwp/}{illustrations/qwp/sample.pdf_tex}
+\caption{Sketch of the sample.
+It consists of a $200\unit{nm}$ gold film sputtered on top of a glass substrate.
+Note that the vertical scale is greatly exaggerated compared to the horizontal scale.
+Adapted from \textcite[p.~78]{KuzminPhDThesis}.}
+\label{qwp:fig:sample}
+\end{figure}
+%
+
+We analyze the polarization by measuring the Stokes parameters of the light transmitted through each slit, using a quarter-wave plate and a linear polarizer.
+We define the Stokes parameters according to the following standard convention:
+\marginnote{$S_0=I_\text{total}$
+\\\noindent $S_1=I_H-I_V$
+\\\noindent $S_2=I_D-I_A$
+\\\noindent $S_3=I_R-I_L$}%
+$S_0$ is the total intensity,
+$S_1$ is the intensity of the horizontal component (\gls{TE}) minus the intensity of the vertical component (\gls{TM}),
+$S_2$ is the intensity of the diagonal (45\textdegree\ clockwise) component minus the intensity of the anti-diagonal (45\textdegree\ counterclockwise) component,
+and $S_3$ is the intensity of the right-handed circular component minus the intensity of the left-handed circular component.
+Since the transmitted light is fully polarized, it is convenient to use the \emph{normalized} Stokes parameters $s_1 = S_1/S_0$, $s_2 = S_2/S_0$, and $s_3 = S_3/S_0$, so that each ranges from $-1$ to $+1$.
+
+\section{Results and interpretation}
+
+\sectionstart{The full Stokes analysis} of the transmitted light, for each of the six basic Stokes input polarizations ($s_{1, 2, 3} = \pm 1$), is shown in Fig.~\ref{fig:stokes-analysis}.
+Figures~\ref{fig:stokes-analysis}a and \ref{fig:stokes-analysis}b confirm that the \gls{TE} and \gls{TM} directions are the slit's eigenpolarizations.
+However, each has its own damping and propagation constant, as we will show.
+In the general case, a slit is therefore both dichroic and birefringent, both properties depending on the slit width $w$.
+%
+% FIGURE
+\begin{figure*}[tb]
+\centering\includegraphics{graphs/qwp/stokes-parameters}
+\caption{Normalized Stokes parameters of the light transmitted through the slit, for illumination with
+(a) horizontal linear polarization ($s_1=+1$),
+(b) vertical linear polarization ($s_1=-1$),
+(c) diagonal linear polarization ($s_2=+1$),
+(d) antidiagonal linear polarization ($s_2=-1$),
+(e) left-handed circular polarization ($s_3=+1$), and
+(f) right-handed circular polarization ($s_3=-1$).
+The polarization ellipses above each graph provide a quick visual indication of the polarization state of the transmitted light.
+The solid lines represent the results of our model, described later on in section~\ref{qwp:sec:waveguide-model}, based on simple waveguide theory.
+}
+\label{fig:stokes-analysis}
+\end{figure*}
+%
+%
+
+Figures~\ref{fig:stokes-analysis}c--f show the variation of the Stokes parameters of the transmitted light when the incident light is not polarized along one of the slits' eigenpolarizations.
+In all cases, $s_1$ is seen to go to $-1$ as the slit gets narrower, reflecting the fact that very narrow slits transmit only \gls{TM}-polarized light.
+
+Let us examine Figs.~\ref{fig:stokes-analysis}c--d more closely, where the incident wave is diagonally linearly polarized ($s_2=\pm 1$).
+As the slit width $w$ is reduced from $500$ to $300\unit{nm}$, the transmitted light gradually becomes more and more elliptically polarized, while the main axis of the polarization ellipse remains oriented along the polarization direction of the incident light; see the line of polarization ellipses in each frame.
+As $w$ is reduced further to around $250\unit{nm}$, the transmitted polarization assumes a more circular form.
+For narrower slits, the polarization ellipse orients itself essentially vertically, reflecting the fact that the polarization becomes more linear, ultimately being purely \gls{TM}-polarized at $w=50\unit{nm}$.
+In Figs.~\ref{fig:stokes-analysis}e--f, with circular input polarization, a similar process happens as $w$ is reduced, except that the transmitted polarization changes gradually from almost circular to linear, before becoming nearly \gls{TM}-polarized at $w=50\unit{nm}$.
+
+We note that there is a point in Figs.~\ref{fig:stokes-analysis}e--f, around $w\approx 250\unit{nm}$, where circular polarization is transformed into linear polarization.
+This implies that the slit acts as a quarter-wave retarder, albeit with unequal losses for the fast and slow axes.
+Because of the inequality of these losses, the incident diagonal polarization in Figs.~\ref{fig:stokes-analysis}c--d is not transformed into a perfectly circular polarization.
+However, a properly oriented linear polarization incident on a $w\approx 250\unit{nm}$ slit whose orientation compensates for the differential loss, \emph{will} be transformed into circular polarization.
+Experiments on other slits have shown that the measured dichroism is highly dependent on the slit parameters, such as milling depth\cite[13]{BosmanBachelorsThesis}, and the incident wavelength.\cite[30]{BogersBachelorsThesis}
+Realizing an ideal quarter-wave retarder therefore requires either careful design and manufacture of the slit, or serendipity.
+
+As expected, the curves of $s_2$ and $s_3$ as a function of $w$ flip their sign when the sign of the incident Stokes parameter is flipped.
+When the incident light's $s_2$ and $s_3$ are exchanged, on the other hand, so are $s_2$ and $s_3$ in the transmitted light.
+The curve of $s_1$ remains the same for all non-$s_1$ incident polarizations.
+The results shown in Fig.~\ref{fig:stokes-analysis} can all be represented in one figure by plotting the measured Stokes parameters on the Poincar\'e sphere.
+Reducing the slit width then traces out a path of the transmitted polarization state over the Poincar\'e sphere's surface, as shown in Fig.~\ref{fig:poincare}.
+%
+% FIGURE
+\begin{figure}[tb]
+\forceversofloat\centering
+\import{illustrations/qwp/}{illustrations/qwp/poincare.pdf_tex}
+\caption{Path of the transmitted polarization state over the Poincar\'e sphere as the slit width decreases.
+The incident polarization state starts at one of the poles or equatorial points, represented by the boxlike markers.
+The spherical markers, with size proportional to the slit width, mark the transmitted polarization state as it travels over the sphere's surface.
+The solid lines are the predictions of our model.}
+\label{fig:poincare}
+\end{figure}
+
+\newthought{In order to analyze our experimental data,} we write the incident field as a Jones vector, preceded by an arbitrary complex amplitude such that the \gls{TE} component is real and positive:
+%
+% EQUATION
+\begin{equation}
+\mathbf{E_\text{in}} = \tilde{A} \left[
+	\begin{array}{c}
+		E_\TE \\
+		E_\TM\, e^{i\psi}
+	\end{array}
+\right], \quad
+\text{ with $E_\TE, E_\TM \geq 0$.}
+\label{qwp:eq:incident-jones-vector}
+\end{equation}
+%
+%
+We express the transmission properties of the slit as a Jones matrix.
+Its off-diagonal elements are zero, because the \gls{TE} and \gls{TM} directions are the slit's eigenpolarizations, and the diagonal elements represent the complex amplitude transmission.
+The output field is then the Jones vector:
+%
+% EQUATION
+\begin{equation}
+\mathbf{E}_\text{out} = \left[
+	\begin{array}{cc}
+		t_\TE & 0 \\
+		0 & t_\TM
+	\end{array}
+\right]
+\,\mathbf{E_\text{in}}.
+\label{Eq:analyzer0}
+\end{equation}
+%
+%
+First, it is instructive to calculate the transmission $T_\TE$ and $T_\TM$ in order to get an idea of the slit's dichroism.
+Here, we define the transmission $T=|t|^2$ as the ratio of power emerging from a slit to power incident on the area of the slit.
+It can be calculated from the unnormalized Stokes parameter $S_1$ for incident light with $s_1=\pm 1$.
+$T_\TE$ and $T_\TM$ are plotted in Fig.~\ref{qwp:fig:dichroism}, normalized so that $T_\TE = 1$ at $w=500\unit{nm}$.
+As the slit width $w$ is decreased, we see that the \gls{TE} and \gls{TM} transmission also decrease until $w\approx 350\unit{nm}$.
+When $w$ is further reduced, the \gls{TM} transmission goes through a minimum at $w\approx 150\unit{nm}$, where the light-surface plasmon coupling is maximum.\cite{Lalanne2006}
+It increases again when the slit width gets even smaller, whereas the \gls{TE} transmission goes through a gradual cutoff, becoming negligible only for the narrowest slits.
+Apparently, a narrow slit in a \emph{thin} metal film is not such a good polarizer as often assumed.
+%
+% FIGURE
+\begin{figure}[tb]
+\forcerectofloat\centering
+\includegraphics{graphs/qwp/dichroism}
+\caption{Dichroism of a subwavelength slit.
+The points show the measured transmission for \gls{TM} and \gls{TE}-polarized incident light as a function of the slit width $w$, normalized to the \gls{TE} transmission at $w=500\unit{nm}$.
+The solid lines show our model's result for the slit transmission according to \eqref{eq:tte} and \eqref{eq:ttm}.}
+\label{qwp:fig:dichroism}
+\end{figure}
+
+In order to calculate the phase lag $\Delta\phi$ between the \gls{TE} and \gls{TM}-pol\-ar\-ized components of the transmitted field, we write the normalized Stokes parameters in terms of \eqref{Eq:analyzer0}:
+\begin{align}
+	s_1 &= -\frac{T_R E_\TM^2 - E_\TE^2}{T_R E_\TM^2 + E_\TE^2},
+		\label{Eq:analyzer-1} \\
+	s_2 &= \frac{2 \sqrt{T_R} E_\TM E_\TE}{T_R E_\TM^2 + E_\TE^2} \cos(\Delta\phi - \psi),
+		\label{Eq:analyzer-2} \\
+	s_3 &= -\frac{2 \sqrt{T_R} E_\TM E_\TE}{T_R E_\TM^2 + E_\TE^2} \sin(\Delta\phi - \psi),
+		\label{Eq:analyzer-3}
+\end{align}
+where $T_R = |t_\TM/t_\TE|^2$ is shorthand for the transmission ratio, $E_\TM$ and $E_\TE$ are the transmitted fields, and $\psi$ is the \gls{TM}--\gls{TE} phase lag; see \eqref{qwp:eq:incident-jones-vector}.
+We calculate $\Delta\phi$ from our measured Stokes parameters using \eqref{Eq:analyzer-1}, \eqref{Eq:analyzer-2}, and \eqref{Eq:analyzer-3}.
+We see in Fig.~\ref{qwp:fig:birefringence} that $\Delta\phi$ decreases almost linearly with increasing slit width.
+It passes through a value of $\pi/2$ at $w \approx 250$~nm.
+Although the retardation equals $\lambda/4$, the $250\unit{nm}$ slit does not act as an ideal quarter-wave retarder because the amplitudes of the \gls{TE} and \gls{TM}-polarized components of the transmitted light are not equal, as noted earlier.
+%
+\begin{figure}[tb]
+\forceversofloat\centering
+\includegraphics{graphs/qwp/birefringence}
+\caption{Birefringence of a subwavelength slit. The points represent the measured phase difference between the \gls{TM} and \gls{TE} modes as a function of the slit width. They are obtained from a fit of the various Stokes parameters of Fig.~\ref{fig:stokes-analysis}. The solid line shows the calculated phase difference according to \eqref{eq:deltaphi}. At a certain slit width, indicated by the arrow, the phase difference reaches $π/2$ and the slit acts as a quarter-wave retarder.
+}
+\label{qwp:fig:birefringence}
+\end{figure}
+
+Figure~\ref{qwp:fig:dichroism} illustrates the slit's dichroism and Fig.~\ref{qwp:fig:birefringence} its birefringence.
+The effect that we observe in Fig.~\ref{fig:stokes-analysis} as the slit width is decreased from $500$ to $300\unit{nm}$ can be explained in terms of increasing birefringence and small dichroism in that range.
+Below $300\unit{nm}$, dichroism becomes more important, and consequently, the main axis of the polarization ellipse rotates.
+The dichroism observed here was also suggested by calculations by \citeauthor{Nugrowati2008}\cite{Nugrowati2008}, where ultrashort \gls{TE} pulses were shown to experience lower propagation speeds than \gls{TM} pulses through a slit in an aluminum layer.
+
+If the slit width is further decreased past the surface plas\-mon-in\-duced minimum at $w\approx 150\unit{nm}$, the dichroic effect becomes even larger.
+The \gls{TE}-polarized component of the transmitted light becomes weaker and weaker, while the \gls{TM} component grows, causing the polarization ellipse to collapse to a vertical line.
+We see that the waveguide's \gls{TE} cutoff does not resemble a sharp cutoff at $w=\lambda/2$ at all, but rather a gradual one.
+
+\section{Waveguide model}
+\label{qwp:sec:waveguide-model}
+\marginnote{We have made our computer code for this model available (\origcite{Chimento2013b}).}%
+\begin{figure}[tb]
+\centering\import{illustrations/qwp/}{illustrations/qwp/geometry.pdf_tex}
+\caption{Cross-section of our model slit.
+The relevant physical quantities are illustrated.
+The indices of refraction $n_{1,2,3}$ are depicted using differently colored materials, although they could well be the same material in an experiment.
+The evanescent tails sketched in red represent surface plasmons.
+The light is transmitted through the slit from left to right.}
+\label{fig:geometry}
+\end{figure}
+%
+\sectionstart{We will now proceed} to explain these experimental results by modeling the slit as a simple lossy waveguide.
+Our metallic slit forms a rectangular waveguide with one dimension of the rectangle much larger than the other.
+For that reason we can effectively describe each slit as a step-index planar waveguide, with its walls made of a metal with relative permittivity $\varepsilon$.
+Inside the waveguide, the solutions to Maxwell's equations separate into \gls{TE} and \gls{TM} modes, each with a complex propagation constant $\beta$.
+Although the equations are in closed form, we must calculate the propagation constants for each mode, $\beta_\TE$ and $\beta_\TM$, numerically \cite{SnyderLove}.
+
+For the \gls{TM} and \gls{TE} modes, we calculate complex reflection and transmission coefficients $r_{21}$, $t_{12}$, $r_{23}$, and $t_{23}$ (see Fig.~\ref{fig:geometry}) using the Fresnel equations at normal incidence, substituting the effective mode index for the index of medium 2.
+The effective mode index is calculated by dividing the propagation constant by $k_0$.
+As shown in Fig.~\ref{fig:geometry}, the index 1 indicates the medium from which the light is incident (air), 2 the waveguide, and 3 the medium into which the transmitted light emerges (glass in our experiment).
+This simplification avoids calculating overlap integrals between the guided mode and the modes outside the waveguide, but still describes the observed phenomena quite well.
+We can then treat the waveguide as a Fabry-P\'erot interferometer and calculate each mode's complex transmission through a waveguide of length $d$,
+\begin{equation}
+t_{123} = \frac{t_{12} t_{23} e^{i\beta d}}
+	{1 - r_{21} r_{23} e^{2i\beta d}},
+\end{equation}
+which gives for the transmission
+\begin{align}
+T_\TE &= \frac{n_3}{n_1}|t_{123}^\TE|^2, \label{eq:tte} \\
+T_\TM &= \frac{n_3}{n_1}|t_{123}^\TM|^2
+	- 2 |c_1|^2
+  	- 2 |c_3|^2. \label{eq:ttm}
+\end{align}
+Here, $c_1$ and $c_3$ are the coupling constants of the slit system to a surface plasmon mode traveling in one direction away from the slit on the interface with medium 1 or 3, respectively.
+Numerical values for these parameters can be calculated%
+\footnote{Calculating $c_1$ and $c_3$ requires evaluating an integral with poles close to the real axis.
+Common adaptive quadrature algorithms for numerical integration cannot handle it, yielding a garbage answer without obviously failing.
+Gaussian quadrature works for numerically evaluating the integral.}
+using Eq.~(20) of \citeauthor{Lalanne2006}\cite{Lalanne2006}, which gives an approximate analytical model for the coupling of a slit mode to a surface plasmon mode.
+As an illustration of the important role these surface plasmon coupling constants play in the phenomenon described here, the \gls{TM} transmission modelled with and without coupling to surface plasmons is shown in Fig.~\ref{fig:sp-effect}.
+The \gls{TE} mode does not couple to surface plasmons.
+%
+\begin{figure}[tb]
+\forceversofloat\centering
+\includegraphics{graphs/qwp/coupling}
+\caption{Calculated effect of surface plasmons on the transmission of \gls{TM}-polarized light as a function of the slit width $w$.
+The green line shows the calculated \gls{TM} transmission neglecting coupling to surface plasmons, based on waveguide theory alone, i.e.\ $(n_3/n_1)|t_{123}^\TM|^2$.
+The orange line shows the total fraction of energy $2|c_1|^2$ converted to surface plasmons on the illuminated (air) side of the sample according to \textcite{Lalanne2006}.
+Likewise, the purple line shows the fraction $2|c_3|^2$ converted to surface plasmons on the unilluminated (glass) side.
+Finally, the red line shows the total \gls{TM} transmission according to \eqref{eq:ttm}.
+In these calculations, we disregard the numerical aperture of the imaging system.}
+\label{fig:sp-effect}
+\end{figure}
+
+It is interesting to note in Fig.~\ref{fig:sp-effect} that the surface plasmon coupling coefficients on both sides exhibit a maximum at $nw/\lambda\approx 0.23$ and a minimum at $nw/\lambda\approx 1$, as predicted by \citeauthor{Lalanne2006}\cite{Lalanne2006}, where $n$ is the index of refraction of the medium outside the slit on each respective side.
+These two curves added together yield a maximum in the surface plasmon excitation, and therefore a dip in the \gls{TM} transmission, at around $w\approx 150\unit{nm}$.
+Even though this dip is not at $nw/\lambda\approx 0.23$ as \citeauthor{Lalanne2006} predict, it is caused by two plasmon excitation maxima that do follow the prediction.
+
+In our model we ignore the thin titanium adhesion layer present between the gold and the glass.
+According to the model, the $|c_3|$ coefficient for a thick titanium layer would be slightly higher than that of the gold layer.
+However, we expect that the layer is too thin to have any effect on the coupling between the slit \gls{TM} mode and surface plasmons.
+It does not prevent the light from scattering into the surface plasmon mode, but only ensures that the surface plasmon mode is very lossy.
+
+Our model exhibits good agreement with the measurements, despite the fact that it does not contain any fitting parameters.
+The slit's gradual \gls{TE} cutoff is predicted well, and can be ascribed to gold not being a perfect conductor at this wavelength, and to the considerable dispersion of the reflection coefficients $r_{12}$ and $r_{23}$ around cutoff.
+The model also predicts a plasmon-related \gls{TM} transmission dip at the right slit width.
+In Fig.~\ref{qwp:fig:dichroism}, we compare these calculated values to our measurements.
+In our calculations, we took the finite \gls{NA} and its influence on the \gls{TM} and \gls{TE} transmission into account, which is explained in section~\ref{qwp:sec:correction-factor}.
+
+The complex transmission also gives us the relative phase delay between the \gls{TM} and \gls{TE} modes:
+\begin{equation}
+\Delta\phi = \arg t_{123}^\TM - \arg t_{123}^\TE \pmod{2\pi}. \label{eq:deltaphi}
+\end{equation}
+This phase difference is plotted in Fig.~\ref{qwp:fig:birefringence} and compared to the values calculated from our measurements using \eqref{Eq:analyzer-1}, \eqref{Eq:analyzer-2}, and \eqref{Eq:analyzer-3}.
+The values predicted by our simple model for the phase delay exhibit excellent agreement with the measurements.
+
+The model presented here suggests exploring the parameter space in order to design slits that act as non-dichroic quarter-wave retarders.
+The requirements are that the \gls{TM} and \gls{TE} transmission are equal taking into account the \gls{TM} loss to surface plasmons, and that the phase difference is $\pi/2$.
+All these requirements are influenced by the metal permittivity $\varepsilon(\lambda)$, the slit width $w$, and the film thickness $d$.
+%\revcomment{Eric: Zou je iets kunnen zeggen over de vraag welke grootheid het snelst varieert als functie van wat?}
+
+\newthought{Our experimental results} contradict a recently published proposal for a quarter-wave retarder using perpendicular metallic nanoslits \cite{Khoo2011}, in which the width of the slits is varied purely to control the \gls{TM} transmission.
+Varying the width of the slit also changes the \gls{TE} transmission of the incident light and the phase difference between the \gls{TM} and \gls{TE} components.
+
+\section{Summary}
+
+\sectionstart{We have studied the transmission properties} of a subwavelength slit milled in a $200\unit{nm}$ thick gold-metal film as a function of the slit width ($50$--$500\unit{nm}$), and of the polarization of the incident radiation (at $\lambda = 830\unit{nm}$).
+As the slit width is decreased, the transmission of the \gls{TE} mode diminishes quite gradually until it becomes very small at a slit width of about $\lambda/8$, reminiscent of the phenomenon of waveguide cutoff.
+In contrast, the transmission of the \gls{TM} mode does not vanish.
+Instead, it exhibits a minimum associated with the efficient excitation of surface plasmons.
+
+Moreover, we have studied the birefringence of this subwavelength slit and found that the phase lag between the \gls{TM} mode and \gls{TE} mode passes through a value of $\pi/2$, so that a properly dimensioned slit can act as a quarter-wave retarder.
+We have successfully explained our experimental results with a simple waveguide model.

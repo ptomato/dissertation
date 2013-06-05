@@ -1,0 +1,108 @@
+% !TEX program = xelatex
+
+\documentclass[10pt]{stellingen}
+\renewcommand\titlestyle[1]{{\LARGE\sffamily\MakeTextUppercase{#1}}}
+\renewcommand\numberingstyle[1]{{\bfseries\sffamily #1}}
+\renewcommand\sourcestyle[1]{{\footnotesize\emph{#1}}}
+\renewcommand\stellingenstring{Propositions}
+\renewcommand\behorendestring{to be defended along with the dissertation}
+\setlength\topsep{0pt}
+
+% FONTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{fonts-inc.tex}
+
+% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dutch,english]{babel}
+% babel/polyglossia/mathspec workaround: github:fc7/polyglossia #28
+\makeatletter
+\begingroup
+  \catcode`\"=\active
+  \AtBeginDocument{\let"=\eu@active@quote}
+\endgroup
+\makeatother
+% \usepackage[a4,center,frame]{crop} % for proofing - outline A5 page on A4 paper
+
+% DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\smallcaps[1]{{\scshape\MakeTextLowercase{#1}}}
+
+\begin{document}
+
+\title{Two-dimensional optics}
+\author{Philip F.~Chimento}
+\maketitle
+
+% ABOUT THIS THESIS
+
+\begin{stelling}[This thesis, chapter 3]
+The topological charge of an optical field distribution in a transverse plane is distinct from the expectation value of the orbital angular momentum per photon, except in axial symmetry.
+\end{stelling}
+
+\begin{stelling}[This thesis, chapter 4]
+Two nanoslits on a gold film could be used as a wavefront sensor with much higher spatial resolution than the commonly-used Shack-Hartmann sensor.
+\end{stelling}
+
+\begin{stelling}[This thesis, chapter 5]
+The damping of a driven oscillator, and the conductivity of the metal in surface plasmon resonance, cause similar displacements of their maximum response.
+\end{stelling}
+
+\begin{stelling}[This thesis, chapter 5]
+It is a misconception that the Otto configuration for studying surface plasmon resonances only causes difficulties.
+\end{stelling}
+
+% ABOUT THE FIELD OF PLASMONICS AND OPTICS
+
+\begin{stelling}[Fridman et al.\ (2012). \emph{Nature 481}, 62.]
+The temporal cloaking device will need to be paired with extremely slow light if it is to hide an event from human eyes.
+\end{stelling}
+
+\begin{stelling}[Couder et al.\ (2005). \emph{Nature 437}, 208.]
+Walking droplets are a good illustration of pilot wave theory at a macroscopic scale.
+\end{stelling}
+
+\begin{stelling}
+There is an advantage to cheap \smallcaps{CCD} cameras' lack of an infrared filter: one can use a laptop or mobile phone to check if one's \smallcaps{TV} remote is still working.
+\end{stelling}
+
+\begin{stelling}[Horv\'ath et al.\ (2010). An unexpected advantage of whiteness in horses: the most horsefly-proof horse has a depolarizing white coat. \emph{Proc.\ R.\ Soc.\ B 277}, 1643.]
+There is a correlation between an object's color and the degree of polarization of the light it scatters.
+\end{stelling}
+
+% ABOUT WHATEVER
+
+% \begin{stelling}[Gottschall \& Gottschall (2003). Are per-incident rape-pregnancy rates higher than per-incident consensual pregnancy rates? \emph{Human Nature 14}(1), 1--20; Renfree \& Shaw (2000). Diapause. \emph{Ann.\ Rev.\ Physiology 62}(1), 353--375.]
+% Politicians who base their anti-abortion stance on `ways of shutting that whole thing down' are apparently confusing humans and kangaroos.
+% The suggestion that women's reproductive organs can be `shut down' at will doesn't account for the very real differences between humans and kangaroos.
+% \end{stelling}
+
+\begin{stelling}[Foremski (2005, June 10). Exclusive interview with seminal 1960s computer visionary Doug Engelbart. \emph{Silicon Valley Watcher.}]
+The data cloud could have been developed forty years ago, had it not been for the baby boomers' distrust of centralization.
+\end{stelling}
+
+\begin{stelling}[Amiss \& Abbott (1995). \emph{Method of exercising a cat.} United States Patent No.\ 5443036.]
+One can use a laser pointer to probe a cat's mechanical excitation states and their eigenfrequencies.
+\end{stelling}
+
+% \begin{stelling}[Article 18.7 of Promotiereglement Universiteit Leiden 2008]
+% Prohibiting advertising in dissertations runs counter to the Dutch government's policy of shifting the burden of science funding to industry.
+% (For example, I would have had Heinz Plasmon Biscuits sponsor the front cover of this dissertation.)
+% \end{stelling}
+
+% \begin{stelling}
+% Given \smallcaps{LION}'s objective of bringing gifted students into contact with `real' research at the earliest possible stage, the undergraduate curriculum makes no sense: students learn to analyze their data in Origin.
+% \end{stelling}
+
+% \begin{stelling}
+% Writing a paper together after a public disagreement in the literature is the professor's equivalent of make-up sex. \emph{Corollary:} Those are always the best papers.
+% \end{stelling}
+
+\begin{stelling}
+Scientists who don't trust students' possibly clumsy hands on their research should work at a research institute instead of at a university.
+\end{stelling}
+
+% \begin{stelling}
+% No amount of effort to increase the share of female professors will help, when old goats are still free to make young women feel unwelcome in physics.
+% \end{stelling}
+
+\end{document}
